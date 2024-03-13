@@ -5,10 +5,23 @@ from PIL import Image
 import streamlit as st
 
 # 파일명과 해당 파일을 저장할 DataFrame 변수명 매핑
-df1 = pd.read_excel("0_data\광양1차.xlsx")
-df2 = pd.read_excel("0_data\광양2차.xlsx")
-df3 = pd.read_excel("0_data\광양3차.xlsx")
-df4 = pd.read_excel("0_data\광양4차.xlsx")
+url1 = (
+    "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/%EA%B4%91%EC%96%911%EC%B0%A8.csv"
+)
+url2 = (
+    "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/%EA%B4%91%EC%96%912%EC%B0%A8.csv"
+    )
+url3 = (
+    "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/%EA%B4%91%EC%96%913%EC%B0%A8.csv"
+    )
+url4 = (
+    "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/%EA%B4%91%EC%96%914%EC%B0%A8.csv"
+    )
+
+df1 = pd.read_csv(url1)
+df2 = pd.read_csv(url2)
+df3 = pd.read_csv(url3)
+df4 = pd.read_csv(url4)
 df_cleaned = df1.dropna(subset=['기온','노면온도'])
 
 
@@ -51,13 +64,13 @@ def create_graph(df1):
             ax=ax,
             ay=ay,
             arrowwidth=2,
-            arrowsize=1.5,
+            arrowsize=1.5,  
             bgcolor='rgb(0, 0, 0)',
             font=dict(color='white', size=13)
         )
 
     fig.update_layout(
-        title=dict(text='1월10일 보성-광양 노면관측 그래프<br>일몰시각 <17:39>, 관측시간<17:47 ~ 19:16>', x=0.5, font=dict(size=24, color="black", family="Arial Black")),
+        title=dict(text='1월10일 보성-광양 노면관측 그래프<br>일몰시각 <17:39>, 관측시간<17:47 ~ 19:16>', x=0, font=dict(size=15, color="black", family="Arial Black"), xanchor='left',),
         xaxis=dict(
             title='날짜와 시간',
             range=[df1['시간'].min(), df1['시간'].max()],
@@ -124,7 +137,7 @@ def create_graph(df2):
             )    
 
     fig.update_layout(
-            title=dict(text='1월11일 광양-보성 2차 노면관측 그래프<br>일출시각 <07:39>, 관측시간<06:50 ~ 08:11>', font=dict(size=24, color="black", family="Arial Black"), x=0.5),
+            title=dict(text='1월11일 광양-보성 2차 노면관측 그래프<br>일출시각 <07:39>, 관측시간<06:50 ~ 08:11>', font=dict(size=15, color="black", family="Arial Black"), x=0),
             xaxis=dict(
                 title='날짜와 시간',
                 range=[df2['시간'].min(), df2['시간'].max()],
@@ -199,7 +212,7 @@ def create_graph(df3):
             )
 
     fig.update_layout(
-        title=dict(text='1월24일 보성-광양 3차 노면관측 그래프<br>일몰시각 <17:52>, 관측시간<17:49 ~ 19:16>', font=dict(size=24, color="black", family="Arial Black"), x=0.5),
+        title=dict(text='1월24일 보성-광양 3차 노면관측 그래프<br>일몰시각 <17:52>, 관측시간<17:49 ~ 19:16>', font=dict(size=15, color="black", family="Arial Black"), x=0),
         xaxis=dict(
             title='날짜와 시간',
             range=[df3['시간'].min(), df3['시간'].max()],
@@ -275,7 +288,7 @@ def create_graph(df4):
         )
 
     fig.update_layout(
-        title=dict(text='1월25일 광양-보성 4차 노면관측 그래프<br>일출시각 <07:35>, 관측시간<05:56 ~ 07:17>', font=dict(size=24, color="black", family="Arial Black"), x=0.5),
+        title=dict(text='1월25일 광양-보성 4차 노면관측 그래프<br>일출시각 <07:35>, 관측시간<05:56 ~ 07:17>', font=dict(size=15, color="black", family="Arial Black"), x=0),
         xaxis=dict(
             title='날짜와 시간',
             range=[df4['시간'].min(), df4['시간'].max()],
