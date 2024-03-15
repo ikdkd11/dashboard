@@ -11,6 +11,8 @@ import plotbox
 import streamlit as st
 from datetime import datetime
 from PIL import Image
+import requests
+from io import BytesIO
 
 st.subheader('위험구간1 - 초당교차로')    
 
@@ -21,18 +23,16 @@ with col1:
                  ['도로 사진(초당교)',
                   '지도 시각화'
                   ])
-                  
+image_url = (
+    "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/%EC%B4%88%EB%8B%B9%EA%B5%90%EC%B0%A8%EB%A1%9C.png"
+)               
+response = requests.get(image_url)
+image1 = Image.open(BytesIO(response.content))
 with col2:
-    if option == '도로 사진':
-        st.image('0_data/초당교차로.jpg')  # 해당 이미지 파일의 경로
+    if option == '도로 사진(초당교)':
+        st.image(image_url)  # 해당 이미지 파일의 경로
     elif option == '지도 시각화':
+        st.image(image_url)
         # map1은 사전에 정의한 지도 객체
         # 예: map1 = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
-        st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
-col1.plotly_chart(trade_mean_map1, use_container_width = True) 
-col2.plotly_chart(vis_trade_rent1, use_container_width = True)
-
-
-col1, col2 = st.columns([1,1])
-col1.plotly_chart(trade_mean1, use_container_width = True)
-col2.plotly_chart(trade_count1, use_container_width = True)
+        #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시

@@ -8,6 +8,7 @@ import plotly.graph_objects as go
 import json
 # import math
 import tot2
+import plotbox
 import streamlit as st
 from datetime import datetime
 from PIL import Image
@@ -25,14 +26,24 @@ trade_count1 = tot2.grp4
 trade_mean1 = tot2.grp3            
 trade_mean_map1 = tot2.grp1
                           
+# 첫 번째 차트
+st.plotly_chart(trade_mean_map1, use_container_width=True)
 
-col1, col2 = st.columns([1,1])
-col1.plotly_chart(trade_mean_map1, use_container_width = True) 
-col2.plotly_chart(vis_trade_rent1, use_container_width = True)
+# 두 번째 차트
+st.plotly_chart(vis_trade_rent1, use_container_width=True)
+
+# 세 번째 차트
+st.plotly_chart(trade_mean1, use_container_width=True)
+
+# 네 번째 차트
+st.plotly_chart(trade_count1, use_container_width=True)
+#col1, col2 = st.columns([1,1])
+#col1.plotly_chart(trade_mean_map1, use_container_width = True) 
+#col2.plotly_chart(vis_trade_rent1, use_container_width = True)
 
 
-col1, col2 = st.columns([1,1])
-col1.plotly_chart(trade_mean1, use_container_width = True)
-col2.plotly_chart(trade_count1, use_container_width = True)
+#col1, col2 = st.columns([1,1])
+#col1.plotly_chart(trade_mean1, use_container_width = True)
+#col2.plotly_chart(trade_count1, use_container_width = True)
 
 
