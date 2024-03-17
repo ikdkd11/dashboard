@@ -28,7 +28,7 @@ df33 = pd.read_csv(url3)
 df44 = pd.read_csv(url4)
 df55 = pd.read_csv(url5)
 
-df11_cleaned = df11
+df11_cleaned = df11.dropna()
 
 # plotly를 사용하여 그래프 그리기
 def create_graph(df11_cleaned):
@@ -94,4 +94,3 @@ def create_graph(df11_cleaned):
     )
     return fig
 grp11 = create_graph(df11_cleaned)
-grp11.show()
