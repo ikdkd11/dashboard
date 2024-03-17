@@ -1,6 +1,7 @@
 import folium
 import pandas as pd
 import branca.colormap as cm
+from streamlit_folium import st_folium
 
 # 데이터 불러오기
 url1 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/1_1.csv"
@@ -42,5 +43,4 @@ def road_map_single(df1):
     return map11
 
 # 함수 호출 및 지도 생성
-map_single = road_map_single(df1)
-map_single.save('single_map.html')  # 지도를 HTML 파일로 저장
+map1_1 = road_map_single(df1)

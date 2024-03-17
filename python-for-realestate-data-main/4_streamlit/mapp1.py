@@ -7,8 +7,6 @@ import pathlib
 import datetime
 
 
-
-
 def create_map(csv_path: str):
     _, ext = os.path.splitext(csv_path)
     ext = ext.lower()
@@ -60,12 +58,3 @@ def create_map(csv_path: str):
     map11.m2.add_child(colormap)
 
     return map11
-
-if __name__ == "__main__":
-    _clear_temps()
-    # map11 객체에 지도 생성
-    url = 
-    map11 = create_map(url)
-    # 사용 예: map11 객체로 다양한 조작 수행 가능
-    # 예: map11.save('example.html')  # 객체를 HTML 파일로 저장하는 방법
-    _clear_temps()
