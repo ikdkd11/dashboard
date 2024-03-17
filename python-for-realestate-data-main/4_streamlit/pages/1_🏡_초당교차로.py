@@ -40,5 +40,5 @@ with col2:
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
 
 col1, col2 = st.columns([1,1])
-col1.plotly_chart(grph1, use_container_width = True)
+col1.plotly_chart(box11, use_container_width = True)
 col2.plotly_chart(box11, use_container_width = True)
