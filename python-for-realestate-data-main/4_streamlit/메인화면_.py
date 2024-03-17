@@ -13,7 +13,6 @@ import plotbox
 import streamlit as st
 from datetime import datetime
 from PIL import Image
-from streamlit_folium import st_folium
 
 st.set_page_config(
     page_title="결빙관측 대시보드",

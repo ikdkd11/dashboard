@@ -1,7 +1,6 @@
 import folium
 import pandas as pd
 import branca.colormap as cm
-from streamlit_folium import st_folium
 import pandas as pd
 import plotly.graph_objects as go
 
