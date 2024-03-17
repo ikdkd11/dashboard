@@ -13,9 +13,11 @@ from datetime import datetime
 from PIL import Image
 import requests
 from io import BytesIO
+import tot3
 
 st.subheader('위험구간1 - 초당교차로')    
-
+box11 = plotbox.box1
+grph1 = tot3.grp11
 col1, col2 = st.columns([1,1])
 with col1:
     st.write('2번국도 첫번째 위험구간 - 초당교차로 - 초당교 구간<br>')
@@ -36,3 +38,7 @@ with col2:
         # map1은 사전에 정의한 지도 객체
         # 예: map1 = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
+
+col1, col2 = st.columns([1,1])
+col1.plotly_chart(grph1, use_container_width = True)
+col2.plotly_chart(box11, use_container_width = True)
