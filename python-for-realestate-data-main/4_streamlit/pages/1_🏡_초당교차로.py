@@ -14,8 +14,10 @@ from PIL import Image
 import requests
 from io import BytesIO
 import tot3
+import mapp
 
-st.subheader('위험구간1 - 초당교차로')    
+st.subheader('위험구간1 - 초당교차로')
+map1 = mapp.map11    
 box11 = plotbox.box1
 grph1 = tot3.grp11
 col1, col2 = st.columns([1,1])
@@ -34,7 +36,7 @@ with col2:
     if option == '도로 사진(초당교)':
         st.image(image_url)  # 해당 이미지 파일의 경로
     elif option == '지도 시각화':
-        st.image(image_url)
+        col2.plotly_chart(map1, use_container_width = True)
         # map1은 사전에 정의한 지도 객체
         # 예: map1 = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
