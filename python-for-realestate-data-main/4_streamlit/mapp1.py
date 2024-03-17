@@ -6,20 +6,28 @@ import os
 import pathlib
 import datetime
 
-# 임시 폴더 설정
-url1 = (
-    "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/1_1.csv"
-)
-df1 = pd.read_csv(url1)
 
 
-def road_map11(df1):
-    lines = df1[["위도", "경도"]].values[:].tolist()
-    rtems = df1["노면온도"].tolist()
-    temps = df1["기온"].tolist()
 
-    avg_lat = df1["위도"].mean()
-    avg_lon = df1["경도"].mean()
+def create_map(csv_path: str):
+    _, ext = os.path.splitext(csv_path)
+    ext = ext.lower()
+    if ext == ".csv":
+        df = pd.read_csv(csv_path, encoding="utf-8")
+    elif ext == ".xlsx":
+        df = pd.read_excel(csv_path)
+
+    try:
+        datetime.datetime.strptime(df["wdate_"][0], "%Y-%m-%d %H:%M")
+    except:
+        pass
+
+    lines = df[["위도", "경도"]].values[:].tolist()
+    rtems = df["노면온도"].tolist()
+    temps = df["기온"].tolist()
+
+    avg_lat = df["위도"].mean()
+    avg_lon = df["경도"].mean()
     center = [avg_lat, avg_lon]
 
     colormap = cm.LinearColormap(
@@ -52,3 +60,12 @@ def road_map11(df1):
     map11.m2.add_child(colormap)
 
     return map11
+
+if __name__ == "__main__":
+    _clear_temps()
+    # map11 객체에 지도 생성
+    url = 
+    map11 = create_map(url)
+    # 사용 예: map11 객체로 다양한 조작 수행 가능
+    # 예: map11.save('example.html')  # 객체를 HTML 파일로 저장하는 방법
+    _clear_temps()

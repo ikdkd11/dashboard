@@ -17,7 +17,7 @@ import tot3
 import mapp
 
 st.subheader('위험구간1 - 초당교차로')
-map1 = mapp.map11    
+map1 = mapp.road_map11    
 box11 = plotbox.box1
 grph1 = tot3.grp11
 col1, col2 = st.columns([1,1])
