@@ -94,3 +94,4 @@ def create_graph(df11_cleaned):
     )
     return fig
 grp11 = create_graph(df11_cleaned)
+grp11.show()
