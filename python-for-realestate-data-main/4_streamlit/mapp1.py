@@ -1,60 +1,135 @@
-import pandas as pd
 import folium
-from folium.plugins import DualMap
+import pandas as pd
 import branca.colormap as cm
-import os
-import pathlib
-import datetime
+import pandas as pd
+import plotly.graph_objects as go
 
+# 데이터 불러오기
+url1 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/1_1.csv"
+url2 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/1-2.csv"
+url3 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/1-3.csv"
+url4 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/1-4.csv"
 
-def create_map(csv_path: str):
-    _, ext = os.path.splitext(csv_path)
-    ext = ext.lower()
-    if ext == ".csv":
-        df = pd.read_csv(csv_path, encoding="utf-8")
-    elif ext == ".xlsx":
-        df = pd.read_excel(csv_path)
+df1 = pd.read_csv(url1)
+df2 = pd.read_csv(url2)
+df3 = pd.read_csv(url3)
+df4 = pd.read_csv(url4)
 
-    try:
-        datetime.datetime.strptime(df["wdate_"][0], "%Y-%m-%d %H:%M")
-    except:
-        pass
+# 평균 위도와 경도 계산
+avg_lat1 = df1["위도"].mean()
+avg_lat2 = df2["위도"].mean()
+avg_lat3 = df3["위도"].mean()
+avg_lat4 = df4["위도"].mean()
+avg_lon1 = df1["경도"].mean()
+avg_lon2 = df2["경도"].mean()
+avg_lon3 = df3["경도"].mean()
+avg_lon4 = df4["경도"].mean()
 
-    lines = df[["위도", "경도"]].values[:].tolist()
-    rtems = df["노면온도"].tolist()
-    temps = df["기온"].tolist()
+# Plotly Graph Objects를 사용한 시각화
+def create_graph(df1):
+    fig = go.Figure(go.Scattermapbox(
+        lat=df1["위도"],
+        lon=df1["경도"],
+        mode='markers',
+        marker=go.scattermapbox.Marker(
+            size=15,
+            color=df1["노면온도"],
+            colorscale="Plasma",
+            cmin=df1["노면온도"].min(),
+            cmax=df1["노면온도"].max(),
+            showscale=True,
+        ),
+        text=df1["노면온도"],
+    ))
 
-    avg_lat = df["위도"].mean()
-    avg_lon = df["경도"].mean()
-    center = [avg_lat, avg_lon]
+    fig.update_layout(
+        mapbox=dict(
+            style="open-street-map",
+            center=dict(lat=avg_lat1, lon=avg_lon1),
+            zoom=13,
+        ),
+        showlegend=False,
+    )
+    return fig
+map11 = create_graph(df1)
 
-    colormap = cm.LinearColormap(
-        colors=[
-            "white", "black", "darkslateblue", "fuchsia", "orchid", "violet",
-            "navy", "blue", "dodgerblue", "darkturquoise", "lightskyblue",
-            "darkgreen", "limegreen", "lime", "lemonchiffon", "yellow",
-            "lightsalmon", "coral", "tomato", "crimson", "red"
-        ],
-        index=[-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-        vmin=-10, vmax=10
-    ).to_step(n=20)
+def create_graph(df2):
+    fig = go.Figure(go.Scattermapbox(
+        lat=df2["위도"],
+        lon=df2["경도"],
+        mode='markers',
+        marker=go.scattermapbox.Marker(
+            size=15,
+            color=df2["노면온도"],
+            colorscale="Plasma",
+            cmin=df2["노면온도"].min(),
+            cmax=df2["노면온도"].max(),
+            showscale=True,
+        ),
+        text=df2["노면온도"],
+    ))
 
-    # 지도 객체 생성
-    map11 = DualMap(location=center, zoom_start=15)
-    for i, point in enumerate(lines):
-        rtemp = rtems[i]
-        diff = round(rtemp - temps[i], 1)
+    fig.update_layout(
+        mapbox=dict(
+            style="open-street-map",
+            center=dict(lat=avg_lat2, lon=avg_lon2),
+            zoom=13,
+        ),
+        showlegend=False,
+    )
+    return fig
+map12 = create_graph(df2)
 
-        folium.Circle(
-            location=point, radius=10, fill=True,
-            color=colormap(rtemp), fill_opacity=0.5
-        ).add_to(map11.m1)
+def create_graph(df3):
+    fig = go.Figure(go.Scattermapbox(
+        lat=df3["위도"],
+        lon=df3["경도"],
+        mode='markers',
+        marker=go.scattermapbox.Marker(
+            size=15,
+            color=df3["노면온도"],
+            colorscale="Plasma",
+            cmin=df3["노면온도"].min(),
+            cmax=df3["노면온도"].max(),
+            showscale=True,
+        ),
+        text=df3["노면온도"],
+    ))
 
-        folium.Circle(
-            location=point, radius=10, fill=True,
-            color=colormap(diff), fill_opacity=0.5
-        ).add_to(map11.m2)
+    fig.update_layout(
+        mapbox=dict(
+            style="open-street-map",
+            center=dict(lat=avg_lat3, lon=avg_lon3),
+            zoom=13,
+        ),
+        showlegend=False,
+    )
+    return fig
+map13 = create_graph(df3)
 
-    map11.m2.add_child(colormap)
+def create_graph(df4):
+    fig = go.Figure(go.Scattermapbox(
+        lat=df4["위도"],
+        lon=df4["경도"],
+        mode='markers',
+        marker=go.scattermapbox.Marker(
+            size=15,
+            color=df4["노면온도"],
+            colorscale="Plasma",
+            cmin=df4["노면온도"].min(),
+            cmax=df4["노면온도"].max(),
+            showscale=True,
+        ),
+        text=df4["노면온도"],
+    ))
 
-    return map11
+    fig.update_layout(
+        mapbox=dict(
+            style="open-street-map",
+            center=dict(lat=avg_lat4, lon=avg_lon4),
+            zoom=13,
+        ),
+        showlegend=False,
+    )
+    return fig
+map14 = create_graph(df4)
