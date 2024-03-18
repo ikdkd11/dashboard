@@ -17,13 +17,21 @@ import tot3
 import mapp
 
 st.subheader('위험구간2 - 옥전교')    
-box11 = plotbox.box1
+
+#1차 위험지역 지도 시각화 자료 호출
 map1_1 = mapp.map11
 map1_2 = mapp.map12
 map1_3 = mapp.map13
 map1_4 = mapp.map14
 
+#1~5번째 위험지역 별 시계열 그래프
 grph1 = tot3.grp11
+grph2 = tot3.grp22
+
+#1~5번째 위험지역 별 박스그림
+box11 = plotbox.box1
+box22 = plotbox.box2
+
 col1, col2 = st.columns([1,1])
 with col1:
     st.write('2번국도 첫번째 위험구간 - 초당교차로 - 초당교 구간')
@@ -55,4 +63,4 @@ with col2:
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
 col1, col2 = st.columns([1,1])
 col1.plotly_chart(grph1, use_container_width = True)
-col2.plotly_chart(box11, use_container_width = True) 
+col2.plotly_chart(box22, use_container_width = True) 

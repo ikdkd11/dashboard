@@ -94,3 +94,97 @@ def create_graph(df11_cleaned):
     )
     return fig
 grp11 = create_graph(df11_cleaned)
+
+# NaN 값을 가진 행 제거
+
+df22_cleaned = df22.dropna()
+
+def create_graph(df22_cleaned):
+    fig = go.Figure()
+    # 기온 데이터 색상 (빨간색 계열)
+    #temp_colors = ['rgb(255,0,0)', 'rgb(255,99,71)', 'rgb(255,69,0)', 'rgb(220,20,60)']
+    # 노면온도 데이터 색상 (파란색 계열)
+    road_temp_colors = [' rgb(204, 37, 41)', 'rgb(0, 158, 115)', 'rgb(255, 128, 0)', 'rgb(0, 114, 178)']
+
+    # 노면온도 데이터 추가
+    for i in range(1, 5):
+        fig.add_trace(go.Scatter(
+            mode='lines',
+            x=df22_cleaned.index,  # 인덱스를 x축 데이터로 사용
+            y=df22_cleaned[f'노면온도({i}차)'],
+            name=f'노면온도({i}차)',
+            line=dict(color=road_temp_colors[i-1], width=2),
+            connectgaps=True
+        ))
+
+    ##그래프에 도로 구간정보 주석으로 삽입
+    # x=86 신월2교고가 하부(남해고속도로 교차지점) 교차 위치에 1차 관측 주석 추가
+    fig.add_annotation(
+        x=87,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df22_cleaned.loc[df22_cleaned.index == 87, '노면온도(1차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='남해고속도로 교차점(1차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-40,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=100,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+    # x=88 신월2교고가 하부(남해고속도로 교차지점) 교차 위치에 3차 관측 주석 추가
+    fig.add_annotation(
+        x=88,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df22_cleaned.loc[df22_cleaned.index == 88, '노면온도(3차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='남해고속도로 교차점(2차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=90,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-20,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+    # x=70 신월2교고가 하부(남해고속도로 교차지점) 교차 위치에 2차 관측 주석 추가
+    fig.add_annotation(
+        x=70,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df22_cleaned.loc[df22_cleaned.index == 70, '노면온도(2차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='남해고속도로 교차점(3차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-130,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=0,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=87 신월2교고가 하부(남해고속도로 교차지점) 교차 위치에 4차 관측 주석 추가
+    fig.add_annotation(
+        x=87,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df22_cleaned.loc[df22_cleaned.index == 87, '노면온도(4차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='남해고속도로 교차점(4차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-25,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=80,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # 그래프 레이아웃 설정
+    fig.update_layout(
+        title=dict(
+            text='[2번국도]결빙 관측 세부 데이터 : 2번째 결빙 고위험구간 <br>상세 구간: 옥전교',
+            font=dict(size=24, color="black", family="Arial Black")  # 볼드 폰트로 변경
+        ),
+        xaxis=dict(title='방향 : 보성 > 광양'),
+        yaxis=dict(title='온도(°C)'),
+        hovermode="x"
+    )
+    return fig
+grp22 = create_graph(df22_cleaned)

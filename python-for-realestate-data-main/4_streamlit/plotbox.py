@@ -109,5 +109,3 @@ def create_graph(df5):
     return fig
 # Save the figure as an HTML file to be shared
 box5 = create_graph(df5)
-box2.show()
-box1.show()
