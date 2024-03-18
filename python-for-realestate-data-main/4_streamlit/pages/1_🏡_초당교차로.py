@@ -16,7 +16,7 @@ from io import BytesIO
 import tot3
 import mapp
 
-st.subheader('위험구간1 - 초당교차로')    
+st.header('위험구간1 - 초당교차로')    
 box11 = plotbox.box1
 map1_1 = mapp.map11
 map1_2 = mapp.map12
