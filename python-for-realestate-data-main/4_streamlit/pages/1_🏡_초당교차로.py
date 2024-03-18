@@ -28,20 +28,24 @@ col1, col2 = st.columns([1,1])
 with col1:
     st.write('2번국도 첫번째 위험구간 - 초당교차로 - 초당교 구간')
     option = st.selectbox('표시 이미지 선택:',
-                 ['도로 사진(초당교)',
+                 ['위험구간(전체) 항공사진',
+                  '최저온도 기록구간 사진',
                   '지도 시각화(1차 관측)',
                   '지도 시각화(2차 관측)',
                   '지도 시각화(3차 관측)',
                   '지도 시각화(4차 관측)'
                   ])
-image_url = (
+image_url1 = ("https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%EA%B5%AC%EA%B0%84%EC%A0%84%EC%B2%B41.png?raw=true")
+image_url2 = (
     "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/%EC%B4%88%EB%8B%B9%EA%B5%90%EC%B0%A8%EB%A1%9C.png"
 )               
-response = requests.get(image_url)
-image1 = Image.open(BytesIO(response.content))
+#response = requests.get(image_url)
+#image1 = Image.open(BytesIO(response.content))
 with col2:
-    if option == '도로 사진(초당교)':
-        st.image(image_url)  # 해당 이미지 파일의 경로
+    if option == '위험구간(전체) 항공사진':
+        st.image(image_url1)
+    elif option == '최저온도 기록구간 사진':
+        st.image(image_url2)  # 해당 이미지 파일의 경로
     elif option == '지도 시각화(1차 관측)':
         col2.plotly_chart(map1_1, height = 1080, use_container_width = True)
     elif option == '지도 시각화(2차 관측)':
