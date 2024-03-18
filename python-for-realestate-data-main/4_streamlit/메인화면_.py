@@ -21,6 +21,10 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+url = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/4_streamlit/style.css"
+with open(url) as f:
+    st.markdown(f'<style>{f.read()}</style', unsafe_allow_html=True)
+    
 vis_trade_rent1 = tot2.grp2
 trade_count1 = tot2.grp4
 trade_mean1 = tot2.grp3            
