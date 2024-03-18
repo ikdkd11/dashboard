@@ -37,7 +37,7 @@ with col1:
                   ])
 image_url1 = ("https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%EA%B5%AC%EA%B0%84%EC%A0%84%EC%B2%B41.png?raw=true")
 image_url2 = (
-    "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/%EC%B4%88%EB%8B%B9%EA%B5%90%EC%B0%A8%EB%A1%9C.png"
+    "https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%EC%A0%80%EC%98%A8%EA%B5%AC%EA%B0%841.png?raw=true"
 )               
 #response = requests.get(image_url)
 #image1 = Image.open(BytesIO(response.content))
