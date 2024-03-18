@@ -36,7 +36,9 @@ with col1:
                   '지도 시각화(3차 관측)',
                   '지도 시각화(4차 관측)'
                   ])
-image_url1 = ("https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%EA%B5%AC%EA%B0%84%EC%A0%84%EC%B2%B41.png?raw=true")
+image_url1 = (
+    "https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%EA%B5%AC%EA%B0%84%EC%A0%84%EC%B2%B4-%EC%88%98%EC%A0%95.png?raw=true"
+)
 image_url2 = (
     "https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%EC%A0%80%EC%98%A8%EA%B5%AC%EA%B0%841.png?raw=true"
 )               
