@@ -16,7 +16,7 @@ from io import BytesIO
 import tot3
 import mapp1
 
-st.subheader('위험구간2 - 옥전교')    
+st.header('위험구간2 - 옥전교')    
 
 #1차 위험지역 지도 시각화 자료 호출
 map2_1 = mapp1.map21
