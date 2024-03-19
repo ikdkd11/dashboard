@@ -10,7 +10,7 @@ url1 = (
     "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/1stD.csv"
 )
 url2 = (
-    "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/2-4.csv"
+    "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/2ndD.csv"
     )
 url3 = (
     "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/3rdD.csv"
