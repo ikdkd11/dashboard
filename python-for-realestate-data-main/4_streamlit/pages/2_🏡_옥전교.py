@@ -44,7 +44,7 @@ with col1:
 image_url2 = (
     "https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%EC%98%A5%EC%A0%84%EA%B5%90.png?raw=true"
 )               
-response = requests.get(image_url)
+response = requests.get(image_url2)
 image1 = Image.open(BytesIO(response.content))
 with col2:
     if option == '도로 사진(옥전교-남해고속도로 고각 하부)':
