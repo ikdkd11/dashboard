@@ -41,14 +41,14 @@ with col1:
                   '지도 시각화(3차 관측)',
                   '지도 시각화(4차 관측)'
                   ])
-image_url = (
-    "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/%EC%B4%88%EB%8B%B9%EA%B5%90%EC%B0%A8%EB%A1%9C.png"
+image_url2 = (
+    "https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%EC%98%A5%EC%A0%84%EA%B5%90.png?raw=true"
 )               
 response = requests.get(image_url)
 image1 = Image.open(BytesIO(response.content))
 with col2:
     if option == '도로 사진(옥전교-남해고속도로 고각 하부)':
-        st.image(image_url)  # 해당 이미지 파일의 경로
+        st.image(image_url2)  # 해당 이미지 파일의 경로
     elif option == '지도 시각화(1차 관측)':
         col2.plotly_chart(map2_1, height = 1080, use_container_width = True)
     elif option == '지도 시각화(2차 관측)':
