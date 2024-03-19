@@ -33,7 +33,7 @@ box22 = plotbox.box2
 
 col1, col2 = st.columns([1,1])
 with col1:
-    st.subheader('2번국도 두번째 위험구간: <옥전교(남해고속도로 고각하부)>')
+    st.subheader('<옥전교(남해고속도로 고각하부 - 옥전교)>')
     st.write('주소: 전남 보성군 벌교읍 칠동리 옥전교')
     option = st.selectbox('표시 이미지 선택:',
                  ['위험구간2(옥전교) 위성사진',
