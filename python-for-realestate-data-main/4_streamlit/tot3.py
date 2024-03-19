@@ -85,8 +85,8 @@ def create_graph(df11_cleaned):
     # 그래프 레이아웃 설정
     fig.update_layout(
         title=dict(
-            text='[2번국도]결빙 관측 세부 데이터 : 1번째 결빙 고위험구간 <br>상세 구간: 초당교 > 초당교차로(보성)',
-            font=dict(size=24, color="black", family="Arial Black")  # 볼드 폰트로 변경
+            text='위험구간1: [초당교] - 관측 회차 별 노면온도 시계열 비교',
+            font=dict(size=20, color="black")  # 볼드 폰트로 변경
         ),
         xaxis=dict(title='방향 : 보성 > 광양'),
         yaxis=dict(title='온도(°C)'),
