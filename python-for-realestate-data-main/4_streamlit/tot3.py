@@ -193,9 +193,8 @@ grp22 = create_graph(df22_cleaned)
 
 # NaN 값을 가진 행 제거
 df33_cleaned = df33.dropna()
-
 # plotly를 사용하여 그래프 그리기
-def create_graph(df33_cleaned):
+def create_graph(df33):
     fig = go.Figure()
 
     # 기온 데이터 색상 (빨간색 계열)
@@ -209,8 +208,8 @@ def create_graph(df33_cleaned):
     for i in range(1, 5):
         fig.add_trace(go.Scatter(
             mode='lines',
-            x=df33_cleaned.index,  # 인덱스를 x축 데이터로 사용
-            y=df33_cleaned[f'노면온도({i}차)'],
+            x=df33.index,  # 인덱스를 x축 데이터로 사용
+            y=df33[f'노면온도({i}차)'],
             name=f'노면온도({i}차)',
             line=dict(color=road_temp_colors[i-1], width=2),
             connectgaps=True
@@ -220,7 +219,7 @@ def create_graph(df33_cleaned):
     # x=13 벌교대교 시작위치에 1차 관측 주석 추가
     fig.add_annotation(
         x=13,  # 주석을 달고 싶은 x축 좌표 위치
-        y=df33_cleaned.loc[df33_cleaned.index == 13, '노면온도(1차)'].values[0],  # 예시로 1차 노면온도 사용
+        y=df33.loc[df33.index == 13, '노면온도(1차)'].values[0],  # 예시로 1차 노면온도 사용
         text='벌교대교(1차)',  # 주석에 표시될 텍스트
         showarrow=True,  # 화살표 표시 여부
         arrowhead=3,  # 화살표 머리 스타일
@@ -235,7 +234,7 @@ def create_graph(df33_cleaned):
     # x=12 벌교대교 위치에 2차 관측 주석 추가
     fig.add_annotation(
         x=12,  # 주석을 달고 싶은 x축 좌표 위치
-        y=df33_cleaned.loc[df33_cleaned.index == 12, '노면온도(2차)'].values[0],  # 예시로 1차 노면온도 사용
+        y=df33.loc[df33.index == 12, '노면온도(2차)'].values[0],  # 예시로 1차 노면온도 사용
         text='벌교대교(2차)',  # 주석에 표시될 텍스트
         showarrow=True,  # 화살표 표시 여부
         arrowhead=3,  # 화살표 머리 스타일
@@ -250,7 +249,7 @@ def create_graph(df33_cleaned):
     # x=48 벌교대교 위치에 3차 관측 주석 추가
     fig.add_annotation(
         x=48,  # 주석을 달고 싶은 x축 좌표 위치
-        y=df33_cleaned.loc[df33_cleaned.index == 48, '노면온도(3차)'].values[0],  # 예시로 1차 노면온도 사용
+        y=df33.loc[df33.index == 48, '노면온도(3차)'].values[0],  # 예시로 1차 노면온도 사용
         text='벌교대교(3차)',  # 주석에 표시될 텍스트
         showarrow=True,  # 화살표 표시 여부
         arrowhead=3,  # 화살표 머리 스타일
@@ -265,7 +264,7 @@ def create_graph(df33_cleaned):
     # x=42 벌교대교 위치에 4차 관측 주석 추가
     fig.add_annotation(
         x=42,  # 주석을 달고 싶은 x축 좌표 위치
-        y=df33_cleaned.loc[df33_cleaned.index == 42, '노면온도(4차)'].values[0],  # 예시로 1차 노면온도 사용
+        y=df33.loc[df33.index == 42, '노면온도(4차)'].values[0],  # 예시로 1차 노면온도 사용
         text='벌교대교(4차)',  # 주석에 표시될 텍스트
         showarrow=True,  # 화살표 표시 여부
         arrowhead=3,  # 화살표 머리 스타일
@@ -280,7 +279,7 @@ def create_graph(df33_cleaned):
     # x=252 장양육교 위치에 1차 관측 주석 추가
     fig.add_annotation(
         x=252,  # 주석을 달고 싶은 x축 좌표 위치
-        y=df33_cleaned.loc[df33_cleaned.index == 252, '노면온도(1차)'].values[0],  # 예시로 1차 노면온도 사용
+        y=df33.loc[df33.index == 252, '노면온도(1차)'].values[0],  # 예시로 1차 노면온도 사용
         text='장양육교(1차)',  # 주석에 표시될 텍스트
         showarrow=True,  # 화살표 표시 여부
         arrowhead=3,  # 화살표 머리 스타일
@@ -295,7 +294,7 @@ def create_graph(df33_cleaned):
     # x=230 장양육교 위치에 1차 관측 주석 추가
     fig.add_annotation(
         x=230,  # 주석을 달고 싶은 x축 좌표 위치
-        y=df33_cleaned.loc[df33_cleaned.index == 230, '노면온도(2차)'].values[0],  # 예시로 1차 노면온도 사용
+        y=df33.loc[df33.index == 230, '노면온도(2차)'].values[0],  # 예시로 1차 노면온도 사용
         text='장양육교(2차)',  # 주석에 표시될 텍스트
         showarrow=True,  # 화살표 표시 여부
         arrowhead=3,  # 화살표 머리 스타일
@@ -310,7 +309,7 @@ def create_graph(df33_cleaned):
     # x=260 장양육교 위치에 1차 관측 주석 추가
     fig.add_annotation(
         x=260,  # 주석을 달고 싶은 x축 좌표 위치
-        y=df33_cleaned.loc[df33_cleaned.index == 260, '노면온도(3차)'].values[0],  # 예시로 1차 노면온도 사용
+        y=df33.loc[df33.index == 260, '노면온도(3차)'].values[0],  # 예시로 1차 노면온도 사용
         text='장양육교(3차)',  # 주석에 표시될 텍스트
         showarrow=True,  # 화살표 표시 여부
         arrowhead=3,  # 화살표 머리 스타일
@@ -324,7 +323,7 @@ def create_graph(df33_cleaned):
     # x=252 장양육교 위치에 1차 관측 주석 추가
     fig.add_annotation(
         x=252,  # 주석을 달고 싶은 x축 좌표 위치
-        y=df33_cleaned.loc[df33_cleaned.index == 252, '노면온도(1차)'].values[0],  # 예시로 1차 노면온도 사용
+        y=df33.loc[df33.index == 252, '노면온도(1차)'].values[0],  # 예시로 1차 노면온도 사용
         text='장양육교(1차)',  # 주석에 표시될 텍스트
         showarrow=True,  # 화살표 표시 여부
         arrowhead=3,  # 화살표 머리 스타일
@@ -339,7 +338,7 @@ def create_graph(df33_cleaned):
     # x=230 장양육교 위치에 1차 관측 주석 추가
     fig.add_annotation(
         x=230,  # 주석을 달고 싶은 x축 좌표 위치
-        y=df33_cleaned.loc[df33_cleaned.index == 230, '노면온도(2차)'].values[0],  # 예시로 1차 노면온도 사용
+        y=df33.loc[df33.index == 230, '노면온도(2차)'].values[0],  # 예시로 1차 노면온도 사용
         text='장양육교(2차)',  # 주석에 표시될 텍스트
         showarrow=True,  # 화살표 표시 여부
         arrowhead=3,  # 화살표 머리 스타일
@@ -354,7 +353,7 @@ def create_graph(df33_cleaned):
     # x=260 장양육교 위치에 4차 관측 주석 추가
     fig.add_annotation(
         x=264,  # 주석을 달고 싶은 x축 좌표 위치
-        y=df33_cleaned.loc[df33_cleaned.index == 264, '노면온도(4차)'].values[0],  # 예시로 1차 노면온도 사용
+        y=df33.loc[df33.index == 264, '노면온도(4차)'].values[0],  # 예시로 1차 노면온도 사용
         text='장양육교(4차)',  # 주석에 표시될 텍스트
         showarrow=True,  # 화살표 표시 여부
         arrowhead=3,  # 화살표 머리 스타일
@@ -368,11 +367,12 @@ def create_graph(df33_cleaned):
     fig.update_layout(
     title=dict(
         text='위험구간3: [벌교대교] - 관측 회차 별 노면온도 시계열 비교',
-        font=dict(size=24, color="black")
+        font=dict(size=20, color="black")
     ),
     xaxis=dict(title='방향 : 보성 > 광양'),
     yaxis=dict(title='온도(°C)'),
     hovermode="x"
     )
     return fig
-grp33 = create_graph(df33_cleaned)
+grp33 = create_graph(df33)
+grp33.show()
