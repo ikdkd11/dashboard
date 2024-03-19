@@ -26,7 +26,7 @@ map1_4 = mapp.map14
 grph1 = tot3.grp11
 col1, col2 = st.columns([1,1])
 with col1:
-    st.subheader('2번국도 첫번째 위험구간 <초당교차로 - 초당교>')
+    st.subheader('2번국도 첫번째 위험구간: <초당교차로 - 초당교>')
     st.write('주소: 전라남도 보성군 보성읍 옥평리 952-8')
     option = st.selectbox('표시 이미지 선택:',
                  ['위험구간1(초당교) 위성사진',
