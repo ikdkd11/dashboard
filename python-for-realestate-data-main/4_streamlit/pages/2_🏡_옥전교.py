@@ -19,10 +19,10 @@ import mapp1
 st.subheader('위험구간2 - 옥전교')    
 
 #1차 위험지역 지도 시각화 자료 호출
-map1_1 = mapp1.map11
-map1_2 = mapp1.map12
-map1_3 = mapp1.map13
-map1_4 = mapp1.map14
+map2_1 = mapp1.map21
+map2_2 = mapp1.map22
+map2_3 = mapp1.map23
+map2_4 = mapp1.map24
 
 #1~5번째 위험지역 별 시계열 그래프
 grph1 = tot3.grp11
@@ -51,13 +51,13 @@ with col2:
     if option == '도로 사진(옥전교-남해고속도로 고각 하부)':
         st.image(image_url)  # 해당 이미지 파일의 경로
     elif option == '지도 시각화(1차 관측)':
-        col2.plotly_chart(map1_1, height = 1080, use_container_width = True)
+        col2.plotly_chart(map2_1, height = 1080, use_container_width = True)
     elif option == '지도 시각화(2차 관측)':
-        col2.plotly_chart(map1_2, height = 1080, use_container_width = True)
+        col2.plotly_chart(map2_2, height = 1080, use_container_width = True)
     elif option == '지도 시각화(3차 관측)':
-        col2.plotly_chart(map1_3, height = 1080, use_container_width = True)
+        col2.plotly_chart(map2_3, height = 1080, use_container_width = True)
     elif option == '지도 시각화(4차 관측)':
-        col2.plotly_chart(map1_4, height = 1080, use_container_width = True)
+        col2.plotly_chart(map2_4, height = 1080, use_container_width = True)
         # map1은 사전에 정의한 지도 객체
         # 예: map1 = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
