@@ -28,7 +28,6 @@ map1_4 = mapp.map14
 grph1 = tot3.grp11
 col1, col2 = st.columns([1,1])
 with col1:
-    
     option = st.selectbox('표시 이미지 선택:',
                  ['위험구간1(초당교) 위성사진',
                   '최저온도 기록구간 사진',
