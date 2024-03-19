@@ -180,7 +180,7 @@ def create_graph(df22_cleaned):
     fig.update_layout(
         title=dict(
             text='위험구간2: [옥전교] - 관측 회차 별 노면온도 시계열 비교',
-            font=dict(size=20, color="black", family="Arial Black")  # 볼드 폰트로 변경
+            font=dict(size=20, color="black")  # 볼드 폰트로 변경
         ),
         xaxis=dict(title='방향 : 보성 > 광양'),
         yaxis=dict(title='온도(°C)'),
