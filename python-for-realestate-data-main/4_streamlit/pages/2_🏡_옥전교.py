@@ -25,7 +25,6 @@ map2_3 = mapp1.map23
 map2_4 = mapp1.map24
 
 #1~5번째 위험지역 별 시계열 그래프
-grph1 = tot3.grp11
 grph2 = tot3.grp22
 
 #1~5번째 위험지역 별 박스그림
