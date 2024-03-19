@@ -14,15 +14,15 @@ from PIL import Image
 import requests
 from io import BytesIO
 import tot3
-import mapp
+import mapp1
 
 st.subheader('위험구간2 - 옥전교')    
 
 #1차 위험지역 지도 시각화 자료 호출
-map1_1 = mapp.map11
-map1_2 = mapp.map12
-map1_3 = mapp.map13
-map1_4 = mapp.map14
+map1_1 = mapp1.map11
+map1_2 = mapp1.map12
+map1_3 = mapp1.map13
+map1_4 = mapp1.map14
 
 #1~5번째 위험지역 별 시계열 그래프
 grph1 = tot3.grp11
@@ -48,7 +48,7 @@ image_url = (
 response = requests.get(image_url)
 image1 = Image.open(BytesIO(response.content))
 with col2:
-    if option == '도로 사진(초당교)':
+    if option == '도로 사진(옥전교-남해고속도로 고각 하부)':
         st.image(image_url)  # 해당 이미지 파일의 경로
     elif option == '지도 시각화(1차 관측)':
         col2.plotly_chart(map1_1, height = 1080, use_container_width = True)
