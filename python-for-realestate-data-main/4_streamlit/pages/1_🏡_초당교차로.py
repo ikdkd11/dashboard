@@ -17,6 +17,8 @@ import tot3
 import mapp
 
 st.header('위험구간1 - 초당교차로')    
+st.subheader('<초당교차로 - 초당교>')
+st.write('주소: 전라남도 보성군 보성읍 옥평리 952-8')
 box11 = plotbox.box1
 map1_1 = mapp.map11
 map1_2 = mapp.map12
@@ -26,8 +28,7 @@ map1_4 = mapp.map14
 grph1 = tot3.grp11
 col1, col2 = st.columns([1,1])
 with col1:
-    st.subheader('<초당교차로 - 초당교>')
-    st.write('주소: 전라남도 보성군 보성읍 옥평리 952-8')
+    
     option = st.selectbox('표시 이미지 선택:',
                  ['위험구간1(초당교) 위성사진',
                   '최저온도 기록구간 사진',

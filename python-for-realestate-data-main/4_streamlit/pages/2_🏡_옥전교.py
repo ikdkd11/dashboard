@@ -16,7 +16,9 @@ from io import BytesIO
 import tot3
 import mapp1
 
-st.header('위험구간2 - 옥전교')    
+st.header('위험구간2 - 옥전교')
+st.subheader('<옥전교(남해고속도로 고각하부 - 옥전교)>')
+st.write('주소: 전남 보성군 벌교읍 칠동리 옥전교')    
 
 #1차 위험지역 지도 시각화 자료 호출
 map2_1 = mapp1.map21
@@ -33,8 +35,6 @@ box22 = plotbox.box2
 
 col1, col2 = st.columns([1,1])
 with col1:
-    st.subheader('<옥전교(남해고속도로 고각하부 - 옥전교)>')
-    st.write('주소: 전남 보성군 벌교읍 칠동리 옥전교')
     option = st.selectbox('표시 이미지 선택:',
                  ['위험구간2(옥전교) 위성사진',
                   '지도 시각화(1차 관측)',
