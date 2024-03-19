@@ -35,7 +35,7 @@ col1, col2 = st.columns([1,1])
 with col1:
     st.write('2번국도 첫번째 위험구간 - 초당교차로 - 초당교 구간')
     option = st.selectbox('표시 이미지 선택:',
-                 ['도로 사진(초당교)',
+                 ['위험구간2(옥전교) 위성사진',
                   '지도 시각화(1차 관측)',
                   '지도 시각화(2차 관측)',
                   '지도 시각화(3차 관측)',
@@ -47,7 +47,7 @@ image_url2 = (
 response = requests.get(image_url2)
 image1 = Image.open(BytesIO(response.content))
 with col2:
-    if option == '도로 사진(옥전교-남해고속도로 고각 하부)':
+    if option == '위험구간2(옥전교) 위성사진':
         st.image(image_url2)  # 해당 이미지 파일의 경로
     elif option == '지도 시각화(1차 관측)':
         col2.plotly_chart(map2_1, height = 1080, use_container_width = True)

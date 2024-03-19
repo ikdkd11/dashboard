@@ -29,7 +29,7 @@ with col1:
     st.write('2번국도 첫번째 위험구간 - 초당교차로 - 초당교 구간')
     st.write('주소: 전라남도 보성군 보성읍 옥평리 952-8')
     option = st.selectbox('표시 이미지 선택:',
-                 ['위험구간(전체) 항공사진',
+                 ['위험구간1(초당교) 위성사진',
                   '최저온도 기록구간 사진',
                   '지도 시각화(1차 관측)',
                   '지도 시각화(2차 관측)',
@@ -45,7 +45,7 @@ image_url2 = (
 #response = requests.get(image_url)
 #image1 = Image.open(BytesIO(response.content))
 with col2:
-    if option == '위험구간(전체) 항공사진':
+    if option == '위험구간1(초당교) 위성사진':
         st.image(image_url1)
     elif option == '최저온도 기록구간 사진':
         st.image(image_url2)  # 해당 이미지 파일의 경로
