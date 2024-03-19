@@ -51,7 +51,7 @@ with col2:
     elif option == '최저온도 기록구간 사진':
         st.image(image_url2)  # 해당 이미지 파일의 경로
     elif option == '지도 시각화(1차 관측)':
-        col2.plotly_chart(map1_1, height = 1080, use_container_width = True)
+        col2.plotly_chart(map1_1, use_container_width = True)
     elif option == '지도 시각화(2차 관측)':
         col2.plotly_chart(map1_2, height = 1080, use_container_width = True)
     elif option == '지도 시각화(3차 관측)':
