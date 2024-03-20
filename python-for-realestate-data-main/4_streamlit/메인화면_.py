@@ -22,7 +22,7 @@ st.set_page_config(
     page_icon="🏡",
     layout="wide",
     initial_sidebar_state="expanded"
-)
+)#fd
 st.header('2번국도(보성(초당교차로)~광양(마룡교)) 결빙관측 관측회차 별 노면온도 시계열 그래프') 
 vis_trade_rent1 = tot2.grp2
 trade_count1 = tot2.grp4
