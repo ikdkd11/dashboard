@@ -16,6 +16,7 @@ from PIL import Image
 from folium.plugins import DualMap
 from branca.colormap import LinearColormap
 import wmap1
+from streamlit_folium import st_folium
 
 st.set_page_config(
     page_title="결빙관측 대시보드",
