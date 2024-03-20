@@ -46,7 +46,7 @@ def create_graph(df1):
         mapbox=dict(
             style="open-street-map",
             center=dict(lat=avg_lat1, lon=avg_lon1),
-            zoom=13,
+            zoom=11,
         ),
         showlegend=False,
     )
@@ -73,7 +73,7 @@ def create_graph(df2):
         mapbox=dict(
             style="open-street-map",
             center=dict(lat=avg_lat2, lon=avg_lon2),
-            zoom=13,
+            zoom=11,
         ),
         showlegend=False,
     )
@@ -100,7 +100,7 @@ def create_graph(df3):
         mapbox=dict(
             style="open-street-map",
             center=dict(lat=avg_lat3, lon=avg_lon3),
-            zoom=13,
+            zoom=11,
         ),
         showlegend=False,
     )
@@ -127,7 +127,7 @@ def create_graph(df4):
         mapbox=dict(
             style="open-street-map",
             center=dict(lat=avg_lat4, lon=avg_lon4),
-            zoom=13,
+            zoom=11,
         ),
         showlegend=False,
     )
