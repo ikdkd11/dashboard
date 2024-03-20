@@ -23,7 +23,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )#fd
-st.header('2번국도(보성(초당교차로)~광양(마룡교)) 결빙관측 관측회차 별 노면온도 시계열 그래프') 
+st.header('2번국도(보성(초당교차로)~광양(마룡교)) 결빙관측 관측회차 별 분석정보') 
 vis_trade_rent1 = tot2.grp2
 trade_count1 = tot2.grp4
 trade_mean1 = tot2.grp3            
@@ -36,19 +36,27 @@ mmap4 = mapp5.map64
 tab1, tab2, tab3, tab4 = st.tabs(["1차 관측", "2차 관측", "3차 관측", "4차 관측"])
 with tab1:
 # 첫 번째 차트
+    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 1차관측 노면온도 시계열 그래프') 
     st.plotly_chart(trade_mean_map1, use_container_width=True)
+    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 1차관측 지도 시각화') 
     st.plotly_chart(mmap1, use_container_width=True)
 with tab2:
 # 두 번째 차트
+    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 2차관측 노면온도 시계열 그래프')
     st.plotly_chart(vis_trade_rent1, use_container_width=True)
+    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 2차관측 지도 시각화')
     st.plotly_chart(mmap2, use_container_width=True)   
 with tab3:
 # 세 번째 차트
+    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 3차관측 노면온도 시계열 그래프')
     st.plotly_chart(trade_mean1, use_container_width=True)
+    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 3차관측 지도 시각화')
     st.plotly_chart(mmap3, use_container_width=True)
 with tab4:
 # 네 번째 차트
+    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 4차관측 노면온도 시계열 그래프')
     st.plotly_chart(trade_count1, use_container_width=True)
+    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 4차관측 지도 시각화')
     st.plotly_chart(mmap4, use_container_width=True)
 
 #5
