@@ -5,10 +5,10 @@ import pandas as pd
 import plotly.graph_objects as go
 
 # 데이터 불러오기
-url1 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/2-1.csv"
-url2 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/2-2.csv"
-url3 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/2-3.csv"
-url4 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/2-4.csv"
+url1 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/3-1.csv"
+url2 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/3-2.csv"
+url3 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/3-3.csv"
+url4 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/3-4.csv"
 
 df1 = pd.read_csv(url1)
 df2 = pd.read_csv(url2)
@@ -51,7 +51,7 @@ def create_graph(df1):
         showlegend=False,
     )
     return fig
-map21 = create_graph(df1)
+map31 = create_graph(df1)
 
 def create_graph(df2):
     fig = go.Figure(go.Scattermapbox(
@@ -78,7 +78,7 @@ def create_graph(df2):
         showlegend=False,
     )
     return fig
-map22 = create_graph(df2)
+map32 = create_graph(df2)
 
 def create_graph(df3):
     fig = go.Figure(go.Scattermapbox(
@@ -105,7 +105,7 @@ def create_graph(df3):
         showlegend=False,
     )
     return fig
-map23 = create_graph(df3)
+map33 = create_graph(df3)
 
 def create_graph(df4):
     fig = go.Figure(go.Scattermapbox(
@@ -132,4 +132,6 @@ def create_graph(df4):
         showlegend=False,
     )
     return fig
-map24 = create_graph(df4)
+map34 = create_graph(df4)
+
+map31.show() 
