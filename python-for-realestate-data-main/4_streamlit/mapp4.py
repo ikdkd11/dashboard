@@ -5,10 +5,10 @@ import pandas as pd
 import plotly.graph_objects as go
 
 # 데이터 불러오기
-url1 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/4-1.csv"
-url2 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/4-2.csv"
-url3 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/4-3.csv"
-url4 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/4-4.csv"
+url1 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/5-1.csv"
+url2 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/5-2.csv"
+url3 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/5-3.csv"
+url4 = "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/5-4.csv"
 
 df1 = pd.read_csv(url1)
 df2 = pd.read_csv(url2)
