@@ -15,14 +15,14 @@ import requests
 from io import BytesIO
 import tot3
 import mapp
-
+import tta
 
 box11 = plotbox.box1
 map1_1 = mapp.map11
 map1_2 = mapp.map12
 map1_3 = mapp.map13
 map1_4 = mapp.map14
-
+table1 = tta.average_temperatures1
 grph1 = tot3.grp11
 st.header('위험구간 첫번째 - 초당교차로')    
 st.subheader('<초당교차로 - 초당교>')
@@ -64,5 +64,11 @@ with col2:
 
 st.subheader('위험구간1(초당교차로-초당교 구간) 1~4차 관측회차 별 시계열 그래프 및 박스그림                                                                               ')
 col1, col2 = st.columns([1,1])
-col1.plotly_chart(grph1, use_container_width = True)
-col2.plotly_chart(box11, use_container_width = True) 
+with col1:
+    st.plotly_chart(grph1, use_container_width = True)
+with col2:
+    tab1, tab2 = st.tabs(["Table", "Graph"])
+    with tab1:
+       st.table(table1, use_container_width=True)
+    with tab2:
+        st.plotly_chart(box11, use_container_width=True)
