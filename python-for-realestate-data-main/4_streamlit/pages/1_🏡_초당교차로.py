@@ -62,7 +62,7 @@ with col2:
         # 예: map1 = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
 
-st.subheader('초당교(초당교차로-초당교 구간) 1~4차 관측회차 별 시계열 그래프 및 박스그림                                                                               ')
+st.subheader('위험구간1(초당교차로-초당교 구간) 1~4차 관측회차 별 시계열 그래프 및 박스그림                                                                               ')
 col1, col2 = st.columns([1,1])
 col1.plotly_chart(grph1, use_container_width = True)
 col2.plotly_chart(box11, use_container_width = True) 

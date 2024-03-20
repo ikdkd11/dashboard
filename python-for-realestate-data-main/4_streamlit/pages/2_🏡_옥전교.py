@@ -67,7 +67,7 @@ with col2:
         # map1은 사전에 정의한 지도 객체
         # 예: map1 = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
-st.subheader('옥전교(남해고속도로 고각하부) 1~4차 관측회차 별 시계열 그래프 및 박스그림                                                                               ')
+st.subheader('위험구간2(남해고속도로 고각하부-옥전교) 1~4차 관측회차 별 시계열 그래프 및 박스그림                                                                               ')
 col1, col2 = st.columns([1,1])
 col1.plotly_chart(grph2, use_container_width = True)
 col2.plotly_chart(box22, use_container_width = True) 
