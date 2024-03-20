@@ -25,7 +25,7 @@ map5_2 = mapp4.map52
 map5_3 = mapp4.map53
 map5_4 = mapp4.map54
 
-grph1 = tot3.grp11
+grph5 = tot3.grp55
 col1, col2 = st.columns([1,1])
 with col1:
     option = st.selectbox('표시 이미지 선택:',
@@ -55,5 +55,5 @@ with col2:
         # 예: map1 = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
 col1, col2 = st.columns([1,1])
-col1.plotly_chart(grph1, use_container_width = True)
+col1.plotly_chart(grph5, use_container_width = True)
 col2.plotly_chart(box11, use_container_width = True) 
