@@ -4,7 +4,7 @@ import geopandas as gpd
 import glob
 import plotly.express as px
 import plotly.graph_objects as go
-# import folium
+# import foliumpip uninstall streamlit-folium
 import json
 # import math
 import vis_func
