@@ -29,7 +29,7 @@ grph3 = tot3.grp33
 col1, col2 = st.columns([1,1])
 with col1:
     option = st.selectbox('표시 이미지 선택:',
-                 ['도로 사진(초당교)',
+                 ['위험구간3(벌교대교-장양육교) 위성사진',
                   '지도 시각화(1차 관측)',
                   '지도 시각화(2차 관측)',
                   '지도 시각화(3차 관측)',
@@ -41,7 +41,7 @@ image_url = (
 response = requests.get(image_url)
 image1 = Image.open(BytesIO(response.content))
 with col2:
-    if option == '도로 사진(초당교)':
+    if option == '위험구간3(벌교대교-장양육교) 위성사진':
         st.image(image_url)  # 해당 이미지 파일의 경로
     elif option == '지도 시각화(1차 관측)':
         col2.plotly_chart(map3_1, height = 1080, use_container_width = True)
