@@ -37,6 +37,7 @@ col1, col2 = st.columns([1,1])
 with col1:
     option = st.selectbox('표시 이미지 선택:',
                  ['위험구간2(옥전교) 위성사진',
+                  '위험구간2(남해고속도로 교차점 - 옥전교) 도로교차지점 거리뷰',
                   '지도 시각화(1차 관측)',
                   '지도 시각화(2차 관측)',
                   '지도 시각화(3차 관측)',
@@ -44,12 +45,17 @@ with col1:
                   ])
 image_url2 = (
     "https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%EC%98%A5%EC%A0%84%EA%B5%90.png?raw=true"
-)               
+)   
+image_url3 = (
+    "https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%EA%B5%90%EA%B0%81%ED%95%98%EB%B6%80.png?raw=true"
+)            
 response = requests.get(image_url2)
 image1 = Image.open(BytesIO(response.content))
 with col2:
-    if option == '위험구간2(옥전교) 위성사진':
+    if option == '위험구간2(남해고속도로 교차점 - 옥전교) 위성사진':
         st.image(image_url2)  # 해당 이미지 파일의 경로
+    elif option == '위험구간2(남해고속도로 교차점 - 옥전교) 도로교차지점 거리뷰':
+        st.image(image_url3)
     elif option == '지도 시각화(1차 관측)':
         col2.plotly_chart(map2_1, height = 1080, use_container_width = True)
     elif option == '지도 시각화(2차 관측)':
