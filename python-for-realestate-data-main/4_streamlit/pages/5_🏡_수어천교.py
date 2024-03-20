@@ -14,16 +14,16 @@ from PIL import Image
 import requests
 from io import BytesIO
 import tot3
-import mapp
+import mapp4
 
 st.header('위험구간 다섯번째 - 수어천교')    
 st.subheader('<중군터널 - 신금1,2교 - 수어천교 - 마룡교>')
 st.write('주소: 전라남도 광양시 옥곡면 신금리')
 box11 = plotbox.box1
-map1_1 = mapp.map11
-map1_2 = mapp.map12
-map1_3 = mapp.map13
-map1_4 = mapp.map14
+map5_1 = mapp4.map51
+map5_2 = mapp4.map52
+map5_3 = mapp4.map53
+map5_4 = mapp4.map54
 
 grph1 = tot3.grp11
 col1, col2 = st.columns([1,1])

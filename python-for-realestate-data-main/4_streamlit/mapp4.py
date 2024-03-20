@@ -51,7 +51,7 @@ def create_graph(df1):
         showlegend=False,
     )
     return fig
-map41 = create_graph(df1)
+map51 = create_graph(df1)
 
 def create_graph(df2):
     fig = go.Figure(go.Scattermapbox(
@@ -78,7 +78,7 @@ def create_graph(df2):
         showlegend=False,
     )
     return fig
-map42 = create_graph(df2)
+map52 = create_graph(df2)
 
 def create_graph(df3):
     fig = go.Figure(go.Scattermapbox(
@@ -105,7 +105,7 @@ def create_graph(df3):
         showlegend=False,
     )
     return fig
-map43 = create_graph(df3)
+map53 = create_graph(df3)
 
 def create_graph(df4):
     fig = go.Figure(go.Scattermapbox(
@@ -132,4 +132,4 @@ def create_graph(df4):
         showlegend=False,
     )
     return fig
-map44 = create_graph(df4)
+map54 = create_graph(df4)
