@@ -29,6 +29,7 @@ trade_count1 = tot2.grp4
 trade_mean1 = tot2.grp3            
 trade_mean_map1 = tot2.grp1
 mmap1 = mapp5.map61
+mmap
 tab1, tab2, tab3, tab4 = st.tabs(["1차 관측", "2차 관측", "3차 관측", "4차 관측"])
 with tab1:
 # 첫 번째 차트
