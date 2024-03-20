@@ -16,7 +16,7 @@ from io import BytesIO
 import tot3
 import mapp3
 
-st.header('위험구간4 - 세풍대교')    
+st.header('위험구간 네번째 - 세풍대교')    
 st.subheader('<세풍대교 - 초남1교 - 초남터널>')
 st.write('주소: 전라남도 광양시 광양읍 초남리')    
 box11 = plotbox.box1

@@ -24,7 +24,7 @@ map1_3 = mapp.map13
 map1_4 = mapp.map14
 
 grph1 = tot3.grp11
-st.header('위험구간1 - 초당교차로')    
+st.header('위험구간 첫번째 - 초당교차로')    
 st.subheader('<초당교차로 - 초당교>')
 st.write('주소: 전라남도 보성군 보성읍 옥평리 952-8')
 col1, col2 = st.columns([1,1])
