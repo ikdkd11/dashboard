@@ -69,6 +69,6 @@ with col1:
 with col2:
     tab1, tab2 = st.tabs(["Table", "Graph"])
     with tab1:
-       st.table(table1, use_container_width=True)
+       st.table(table1.head(5))
     with tab2:
         st.plotly_chart(box11, use_container_width=True)
