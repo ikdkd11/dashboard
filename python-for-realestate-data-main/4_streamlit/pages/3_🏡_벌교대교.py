@@ -36,7 +36,7 @@ with col1:
                   '지도 시각화(4차 관측)'
                   ])
 image_url = (
-    "https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/%EC%B4%88%EB%8B%B9%EA%B5%90%EC%B0%A8%EB%A1%9C.png"
+    "https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%EB%B2%8C%EA%B5%90%EB%8C%80%EA%B5%90.png?raw=true"
 )               
 response = requests.get(image_url)
 image1 = Image.open(BytesIO(response.content))
