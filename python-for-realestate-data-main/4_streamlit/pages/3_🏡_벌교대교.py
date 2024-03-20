@@ -19,7 +19,7 @@ import mapp2
 st.header('위험구간3 - 벌교대교')    
 st.subheader('<벌교대교 - 장양육교>')
 st.write('주소: 전남 보성군 벌교읍 칠동리 옥전교')  
-box11 = plotbox.box1
+box33 = plotbox.box3
 map3_1 = mapp2.map31
 map3_2 = mapp2.map32
 map3_3 = mapp2.map33
@@ -57,4 +57,4 @@ with col2:
 st.subheader('위험구간3(벌교대교-장양육교) 1~4차 관측회차 별 시계열 그래프 및 박스그림                                                                               ')        
 col1, col2 = st.columns([1,1])
 col1.plotly_chart(grph3, use_container_width = True)
-col2.plotly_chart(box11, use_container_width = True) 
+col2.plotly_chart(box33, use_container_width = True) 
