@@ -133,5 +133,3 @@ def create_graph(df4):
     )
     return fig
 map34 = create_graph(df4)
-
-map31.show() 

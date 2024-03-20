@@ -14,16 +14,16 @@ from PIL import Image
 import requests
 from io import BytesIO
 import tot3
-import mapp
+import mapp2
 
 st.header('위험구간3 - 벌교대교')    
 st.subheader('<벌교대교 - 장양육교>')
 st.write('주소: 전남 보성군 벌교읍 칠동리 옥전교')  
 box11 = plotbox.box1
-map1_1 = mapp.map11
-map1_2 = mapp.map12
-map1_3 = mapp.map13
-map1_4 = mapp.map14
+map3_1 = mapp2.map31
+map3_2 = mapp2.map32
+map3_3 = mapp2.map33
+map3_4 = mapp2.map34
 
 grph3 = tot3.grp33
 col1, col2 = st.columns([1,1])
@@ -44,13 +44,13 @@ with col2:
     if option == '도로 사진(초당교)':
         st.image(image_url)  # 해당 이미지 파일의 경로
     elif option == '지도 시각화(1차 관측)':
-        col2.plotly_chart(map1_1, height = 1080, use_container_width = True)
+        col2.plotly_chart(map3_1, height = 1080, use_container_width = True)
     elif option == '지도 시각화(2차 관측)':
-        col2.plotly_chart(map1_2, height = 1080, use_container_width = True)
+        col2.plotly_chart(map3_2, height = 1080, use_container_width = True)
     elif option == '지도 시각화(3차 관측)':
-        col2.plotly_chart(map1_3, height = 1080, use_container_width = True)
+        col2.plotly_chart(map3_3, height = 1080, use_container_width = True)
     elif option == '지도 시각화(4차 관측)':
-        col2.plotly_chart(map1_4, height = 1080, use_container_width = True)
+        col2.plotly_chart(map3_4, height = 1080, use_container_width = True)
         # map1은 사전에 정의한 지도 객체
         # 예: map1 = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
