@@ -375,4 +375,3 @@ def create_graph(df33):
     )
     return fig
 grp33 = create_graph(df33)
-grp33.show()
