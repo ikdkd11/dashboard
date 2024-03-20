@@ -61,7 +61,7 @@ def create_graph(df2):
         marker=go.scattermapbox.Marker(
             size=15,
             color=df2["노면온도"],
-            colorscale="Plasma",
+            colorscale="Rainbow",
             cmin=df2["노면온도"].min(),
             cmax=df2["노면온도"].max(),
             showscale=True,
@@ -88,7 +88,7 @@ def create_graph(df3):
         marker=go.scattermapbox.Marker(
             size=15,
             color=df3["노면온도"],
-            colorscale="Plasma",
+            colorscale="Rainbow",
             cmin=df3["노면온도"].min(),
             cmax=df3["노면온도"].max(),
             showscale=True,
@@ -115,7 +115,7 @@ def create_graph(df4):
         marker=go.scattermapbox.Marker(
             size=15,
             color=df4["노면온도"],
-            colorscale="Plasma",
+            colorscale="Rainbow",
             cmin=df4["노면온도"].min(),
             cmax=df4["노면온도"].max(),
             showscale=True,
