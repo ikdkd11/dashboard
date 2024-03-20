@@ -38,25 +38,25 @@ with tab1:
 # 첫 번째 차트
     st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 1차관측 노면온도 시계열 그래프') 
     st.plotly_chart(trade_mean_map1, use_container_width=True)
-    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 1차관측 지도 시각화') 
+    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 1차관측 노면온도 정보 지도 시각화') 
     st.plotly_chart(mmap1, use_container_width=True)
 with tab2:
 # 두 번째 차트
     st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 2차관측 노면온도 시계열 그래프')
     st.plotly_chart(vis_trade_rent1, use_container_width=True)
-    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 2차관측 지도 시각화')
+    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 2차관측 노면온도 정보 지도 시각화')
     st.plotly_chart(mmap2, use_container_width=True)   
 with tab3:
 # 세 번째 차트
     st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 3차관측 노면온도 시계열 그래프')
     st.plotly_chart(trade_mean1, use_container_width=True)
-    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 3차관측 지도 시각화')
+    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 3차관측 노면온도 정보 지도 시각화')
     st.plotly_chart(mmap3, use_container_width=True)
 with tab4:
 # 네 번째 차트
     st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 4차관측 노면온도 시계열 그래프')
     st.plotly_chart(trade_count1, use_container_width=True)
-    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 4차관측 지도 시각화')
+    st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 4차관측 노면온도 정보 지도 시각화')
     st.plotly_chart(mmap4, use_container_width=True)
 
 #5
