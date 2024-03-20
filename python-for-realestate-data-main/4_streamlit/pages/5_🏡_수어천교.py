@@ -44,13 +44,13 @@ with col2:
     if option == '위험구간5(중군터널-신금1,2교-수어천교-마룡교) 위성사진':
         st.image(image_url)  # 해당 이미지 파일의 경로
     elif option == '지도 시각화(1차 관측)':
-        col2.plotly_chart(map1_1, height = 1080, use_container_width = True)
+        col2.plotly_chart(map5_1, height = 1080, use_container_width = True)
     elif option == '지도 시각화(2차 관측)':
-        col2.plotly_chart(map1_2, height = 1080, use_container_width = True)
+        col2.plotly_chart(map5_2, height = 1080, use_container_width = True)
     elif option == '지도 시각화(3차 관측)':
-        col2.plotly_chart(map1_3, height = 1080, use_container_width = True)
+        col2.plotly_chart(map5_3, height = 1080, use_container_width = True)
     elif option == '지도 시각화(4차 관측)':
-        col2.plotly_chart(map1_4, height = 1080, use_container_width = True)
+        col2.plotly_chart(map5_4, height = 1080, use_container_width = True)
         # map1은 사전에 정의한 지도 객체
         # 예: map1 = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
