@@ -577,8 +577,8 @@ def create_graph(df44_cleaned):
     # 그래프 레이아웃 설정
     fig.update_layout(
         title=dict(
-            text='[2번국도] : 결빙 고위험구간(4번째) 관측 세부 데이터<br>가로축 방향 : 보성 -> 광양/ 상세 구간: 세풍교차로 >세풍대교 > 초남1교)',
-            font=dict(size=24, color="black", family="Arial Black")  # 볼드 폰트로 변경
+            text='위험구간4: [세풍대교] - 관측 회차 별 노면온도 시계열 비교',
+            font=dict(size=20, color="black")  # 볼드 폰트로 변경
         ),
         yaxis=dict(title='온도(°C)'),
         hovermode="x"
