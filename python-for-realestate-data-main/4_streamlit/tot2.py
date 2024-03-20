@@ -22,7 +22,7 @@ df1 = pd.read_csv(url1)
 df2 = pd.read_csv(url2)
 df3 = pd.read_csv(url3)
 df4 = pd.read_csv(url4)
-df_cleaned = df1.dropna(subset=['기온','노면온도'])
+df1_cleaned = df1.dropna(subset=['기온','노면온도'])
 
 
 # plotly를 사용하여 그래프 그리기
