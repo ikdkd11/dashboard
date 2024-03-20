@@ -34,7 +34,7 @@ def create_graph(df1):
         marker=go.scattermapbox.Marker(
             size=15,
             color=df1["노면온도"],
-            colorscale="Cool/Warm",
+            colorscale="Rainbow",
             cmin=df1["노면온도"].min(),
             cmax=df1["노면온도"].max(),
             showscale=True,
