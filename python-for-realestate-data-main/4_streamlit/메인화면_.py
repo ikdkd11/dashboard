@@ -43,7 +43,7 @@ st.plotly_chart(trade_mean1, use_container_width=True)
 st.plotly_chart(trade_count1, use_container_width=True)
 
 #5
-st_folium(mmap1, width=1000)
+#st_folium(mmap1, width=1000)
 #col1, col2 = st.columns([1,1])
 #col1.plotly_chart(trade_mean_map1, use_container_width = True) 
 #col2.plotly_chart(vis_trade_rent1, use_container_width = True)
