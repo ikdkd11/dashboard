@@ -585,3 +585,171 @@ def create_graph(df44_cleaned):
     )
     return fig
 grp44 = create_graph(df44_cleaned)
+
+df55_cleaned = df55.dropna()
+def create_graph(df55_cleaned):
+    fig = go.Figure()
+
+# x=19 성황본교 위치에 주석 추가
+    fig.add_annotation(
+        x=19,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df55_cleaned.loc[df55_cleaned.index == 19, '노면온도(1차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='성황본교',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-20,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-30,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=107 정산천1교 위치에 주석 추가
+    fig.add_annotation(
+        x=107,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df55_cleaned.loc[df55_cleaned.index == 107, '노면온도(4차)'].values[0],  # 예시로 4차 노면온도 사용
+        text='정산천1교',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-80,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-1,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=300 중군터널 위치에 주석 추가
+    fig.add_annotation(
+        x=300,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df55_cleaned.loc[df55_cleaned.index == 300, '노면온도(3차)'].values[0],  # 예시로 4차 노면온도 사용
+        text='중군터널',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-1,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=50,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=300 중군터널 위치에 주석 추가
+    fig.add_annotation(
+        x=300,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df55_cleaned.loc[df55_cleaned.index == 300, '노면온도(3차)'].values[0],  # 예시로 4차 노면온도 사용
+        text='중군터널',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-1,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=50,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=504 신금1교 위치에 주석 추가
+    fig.add_annotation(
+        x=504,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df55_cleaned.loc[df55_cleaned.index == 504, '노면온도(4차)'].values[0],  # 예시로 4차 노면온도 사용
+        text='신금1교',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-60,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-5,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=537 신금2교 위치에 주석 추가
+    fig.add_annotation(
+        x=537,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df55_cleaned.loc[df55_cleaned.index == 537, '노면온도(1차)'].values[0],  # 예시로 4차 노면온도 사용
+        text='신금2교',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-10,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-50,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=571 신금교차로 위치에 주석 추가
+    fig.add_annotation(
+        x=571,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df55_cleaned.loc[df55_cleaned.index == 571, '노면온도(1차)'].values[0],  # 예시로 4차 노면온도 사용
+        text='신금교차로',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=10,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-50,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=648 수어천교 위치에 주석 추가
+    fig.add_annotation(
+        x=648,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df55_cleaned.loc[df55_cleaned.index == 648, '노면온도(1차)'].values[0],  # 예시로 4차 노면온도 사용
+        text='수어천교',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=10,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-50,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=758 수어천교 위치에 주석 추가
+    fig.add_annotation(
+        x=758,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df55_cleaned.loc[df55_cleaned.index == 758, '노면온도(1차)'].values[0],  # 예시로 4차 노면온도 사용
+        text='마룡교',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=10,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-50,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # 기온 데이터 색상 (빨간색 계열)
+    temp_colors = ['rgb(255,0,0)', 'rgb(255,99,71)', 'rgb(255,69,0)', 'rgb(220,20,60)']
+    # 노면온도 데이터 색상 (파란색 계열)
+    road_temp_colors = ['rgb(0,0,255)', 'rgb(30,144,255)', 'rgb(70,130,180)', 'rgb(100,149,237)']
+
+    # 노면온도 데이터 추가
+    for i in range(1, 5):
+        fig.add_trace(go.Scatter(
+            mode='lines',
+            x=df55_cleaned.index,  # 인덱스를 x축 데이터로 사용
+            y=df55_cleaned[f'노면온도({i}차)'],
+            name=f'노면온도({i}차)',
+            line=dict(color=road_temp_colors[i-1], width=1.5),
+            connectgaps=True
+        ))
+
+    # 그래프 레이아웃 설정
+    fig.update_layout(
+        title=dict(
+            text='[2번국도] : 결빙 고위험구간(5번째) 관측 세부 데이터<br>가로축 방향 : 보성 -> 광양, 구간 상세 : 성황교차로 > 중군터널 > 수어천교',
+            font=dict(size=24, color="black", family="Arial Black")  # 볼드 폰트로 변경
+        ),
+        xaxis=dict(title='방향 : 보성 > 광양'),
+        yaxis=dict(title='온도(°C)'),
+        hovermode="x"
+    )
+    return fig
+grp55 = create_graph(df55_cleaned)
