@@ -375,3 +375,213 @@ def create_graph(df33):
     )
     return fig
 grp33 = create_graph(df33)
+
+
+df44_cleaned = df44.dropna()
+def create_graph(df44_cleaned):
+# plotly를 사용하여 그래프 그리기
+    fig = go.Figure()
+
+
+    # 노면온도 데이터 색상 (파란색 계열)
+    #road_temp_colors = ['rgb(0,0,255)', 'rgb(30,144,255)', 'rgb(70,130,180)', 'rgb(100,149,237)']
+    road_temp_colors = [' rgb(204, 37, 41)', 'rgb(0, 158, 115)', 'rgb(255, 128, 0)', 'rgb(0, 114, 178)']
+
+    # 노면온도 데이터 추가
+    for i in range(1, 5):
+        fig.add_trace(go.Scatter(
+            mode='lines',
+            x=df44_cleaned.index,  # 인덱스를 x축 데이터로 사용
+            y=df44_cleaned[f'노면온도({i}차)'],
+            name=f'노면온도({i}차)',
+            line=dict(color=road_temp_colors[i-1], width=2),
+            connectgaps=True
+        ))
+
+    ##그래프에 도로 구간정보 주석으로 삽입
+    # x=13 세풍교차로 위치에 주석 추가
+    fig.add_annotation(
+        x=13,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df44_cleaned.loc[df44_cleaned.index == 13, '노면온도(1차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='세풍교차로(1차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=5,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=50,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+    # x=38 세풍교차로 위치에 주석 추가
+    fig.add_annotation(
+        x=40,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df44_cleaned.loc[df44_cleaned.index == 40, '노면온도(2차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='세풍교차로(2차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-70,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-5,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+    # x=38 세풍교차로 위치에 3차 주석 추가
+    fig.add_annotation(
+        x=38,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df44_cleaned.loc[df44_cleaned.index == 38, '노면온도(3차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='세풍교차로(3차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-100,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-38,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=38 세풍교차로 위치에 4차 주석 추가
+    fig.add_annotation(
+        x=39,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df44_cleaned.loc[df44_cleaned.index == 39, '노면온도(4차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='세풍교차로(4차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-70,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-10,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(0, 0, 0, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=80 세풍대교 위치에 주석 추가
+    fig.add_annotation(
+        x=80,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df44_cleaned.loc[df44_cleaned.index == 80, '노면온도(3차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='세풍대교(3차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-100,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-38,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(150, 150, 150, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=89 세풍대교 위치에 주석 추가
+    fig.add_annotation(
+        x=89,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df44_cleaned.loc[df44_cleaned.index == 89, '노면온도(1차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='세풍대교(1차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-150,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=50,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(150, 150, 150, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=80 세풍대교 위치에 주석 추가
+    fig.add_annotation(
+        x=72,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df44_cleaned.loc[df44_cleaned.index == 72, '노면온도(4차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='세풍대교(4차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=80,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-10,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(150, 150, 150, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+    # x=80 세풍대교 위치에 주석 추가
+    fig.add_annotation(
+        x=70,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df44_cleaned.loc[df44_cleaned.index == 70, '노면온도(2차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='세풍대교(2차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-80,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-10,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(150, 150, 150, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+    # x=175 초남1교 위치에 주석 추가
+    fig.add_annotation(
+        x=175,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df44_cleaned.loc[df44_cleaned.index == 175, '노면온도(2차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='초남1교(2차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=0,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-40,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(50, 50, 50, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=207 초남1교 위치에 주석 추가
+    fig.add_annotation(
+        x=196,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df44_cleaned.loc[df44_cleaned.index == 196, '노면온도(4차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='초남1교(4차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-80,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=0,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(50, 50, 50, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # x=215 초남1교 위치에 주석 추가
+    fig.add_annotation(
+        x=234,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df44_cleaned.loc[df44_cleaned.index == 234, '노면온도(3차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='초남1교(3차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=80,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=-20,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(50, 50, 50, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+    # x=215 초남1교 위치에 주석 추가
+    fig.add_annotation(
+        x=215,  # 주석을 달고 싶은 x축 좌표 위치
+        y=df44_cleaned.loc[df44_cleaned.index == 215, '노면온도(1차)'].values[0],  # 예시로 1차 노면온도 사용
+        text='초남1교(1차)',  # 주석에 표시될 텍스트
+        showarrow=True,  # 화살표 표시 여부
+        arrowhead=3,  # 화살표 머리 스타일
+        ax=-80,  # 화살표의 x축 방향 길이 (음수 값 사용하여 왼쪽으로 이동)
+        ay=10,  # 화살표의 y축 방향 길이 (음수 값 사용하여 위로 이동)
+        arrowwidth=2,  # 화살표 선 굵기
+        arrowsize=1,  # 화살표 크기
+        bgcolor='rgba(50, 50, 50, 0.8)',  # 배경색
+        font=dict(color='white', size=14)  # 글자색 및 크기 설정
+    )
+
+    # 그래프 레이아웃 설정
+    fig.update_layout(
+        title=dict(
+            text='[2번국도] : 결빙 고위험구간(4번째) 관측 세부 데이터<br>가로축 방향 : 보성 -> 광양/ 상세 구간: 세풍교차로 >세풍대교 > 초남1교)',
+            font=dict(size=24, color="black", family="Arial Black")  # 볼드 폰트로 변경
+        ),
+        yaxis=dict(title='온도(°C)'),
+        hovermode="x"
+    )
+    return fig
+grp44 = create_graph(df44_cleaned)

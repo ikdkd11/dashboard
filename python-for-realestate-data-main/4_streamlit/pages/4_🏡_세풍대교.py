@@ -23,7 +23,7 @@ map4_2 = mapp3.map42
 map4_3 = mapp3.map43
 map4_4 = mapp3.map44
 
-grph1 = tot3.grp11
+grph4 = tot3.grp44
 col1, col2 = st.columns([1,1])
 with col1:
     st.write('2번국도 첫번째 위험구간 - 초당교차로 - 초당교 구간')
@@ -54,5 +54,5 @@ with col2:
         # 예: map1 = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
 col1, col2 = st.columns([1,1])
-col1.plotly_chart(grph1, use_container_width = True)
+col1.plotly_chart(grph4, use_container_width = True)
 col2.plotly_chart(box11, use_container_width = True) 
