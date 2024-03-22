@@ -26,7 +26,7 @@ map2_1 = mapp1.map21
 map2_2 = mapp1.map22
 map2_3 = mapp1.map23
 map2_4 = mapp1.map24
-table2 = tta.average_temperatures2
+table2 = tta.average_temperatures1
 #1~5번째 위험지역 별 시계열 그래프
 grph2 = tot3.grp22
 
