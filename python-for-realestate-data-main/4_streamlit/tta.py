@@ -21,10 +21,10 @@ average_temperatures3 = data3.groupby(['구분', '차수'])['온도'].mean().uns
 
 # 구분 순서를 지정하고, 소수 첫째 자리까지 나오게 조정합니다.
 custom_order = ['구간 전체', '진입 전', '급락구간']
-
+custom_order3 = ['구간 전체', '벌교대교', '장양육교']
 average_temperatures1 = average_temperatures1.reindex(custom_order).round(1)
 average_temperatures2 = average_temperatures2.reindex(custom_order).round(1)
-average_temperatures3 = average_temperatures3.reindex(custom_order).round(1)
+average_temperatures3 = average_temperatures3.reindex(custom_order3).round(1)
 
 average_temperatures1.columns = ['1차 관측', '2차 관측', '3차 관측', '4차 관측']
 average_temperatures2.columns = ['1차 관측', '2차 관측', '3차 관측', '4차 관측']
