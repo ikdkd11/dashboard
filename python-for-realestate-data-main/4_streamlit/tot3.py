@@ -725,10 +725,8 @@ def create_graph(df55_cleaned):
         font=dict(color='white', size=14)  # 글자색 및 크기 설정
     )
 
-    # 기온 데이터 색상 (빨간색 계열)
-    temp_colors = ['rgb(255,0,0)', 'rgb(255,99,71)', 'rgb(255,69,0)', 'rgb(220,20,60)']
     # 노면온도 데이터 색상 (파란색 계열)
-    road_temp_colors = ['rgb(0,0,255)', 'rgb(30,144,255)', 'rgb(70,130,180)', 'rgb(100,149,237)']
+    road_temp_colors = [' rgb(204, 37, 41)', 'rgb(0, 158, 115)', 'rgb(255, 128, 0)', 'rgb(0, 114, 178)']
 
     # 노면온도 데이터 추가
     for i in range(1, 5):
