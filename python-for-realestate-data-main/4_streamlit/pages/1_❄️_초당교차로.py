@@ -24,6 +24,7 @@ map1_3 = mapp.map13
 map1_4 = mapp.map14
 table1 = tta.average_temperatures1
 grph1 = tot3.grp11
+grbp11 = tta.grbp1
 st.header('위험구간 첫번째 - 초당교차로')    
 st.subheader('<초당교차로 - 초당교>')
 st.write('주소: 전라남도 보성군 보성읍 옥평리 952-8')
@@ -67,9 +68,11 @@ col1, col2 = st.columns([1,1])
 with col1:
     st.plotly_chart(grph1, use_container_width = True)
 with col2:
-    tab1, tab2 = st.tabs(["Table", "Graph"])
+    tab1, tab2, tab3 = st.tabs(["Table", "Graph1", "Graph2"])
     with tab1:
        st.subheader('위험구간 중 최저 노면온도 기록구간 진입 전/후 평균 노면온도 비교')
        st.table(table1.head(5))
     with tab2:
+         st.plotly_chart(grbp11, use_container_width=True)
+    with tab3:
         st.plotly_chart(box11, use_container_width=True)
