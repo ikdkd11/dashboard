@@ -70,7 +70,7 @@ def create_graph(df1):
         )
 
     fig.update_layout(
-        title=dict(text='1월10일 보성-광양 노면관측 그래프<br>일몰시각 <17:39>, 관측시간<17:47 ~ 19:16>', x=0, font=dict(size=15, color="black", family="Arial Black"), xanchor='left',),
+        title=dict(text='1월10일 보성-광양 노면관측 그래프<br>일몰시각 <17:39>, 관측시간<17:47 ~ 19:16>', x=0, font=dict(size=20, color="black", family="Arial Black"), xanchor='left',),
         xaxis=dict(
             title='날짜와 시간',
             range=[df1['시간'].min(), df1['시간'].max()],
