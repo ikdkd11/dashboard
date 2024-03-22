@@ -40,7 +40,7 @@ with tab1:
     st.subheader('10일 저녁~11일 새벽 : 예보 중점 사항')
     st.markdown(
         '''
-        1. 내일(11일) 새벽부터 오전 사이 내륙을 중심으로 짙은 안개가 끼는 곳이 있겠습니다.
+        1. 내일(11일) 새벽부터 오전 사이 내륙을 중심으로 :blue[짙은 안개]가 끼는 곳이 있겠습니다.
         2.  :blue[내린 비]가 얼어 :red[도로 살얼음]이 나타나는 곳이 있겠습니다.
         ''')
     st.plotly_chart(trade_mean_map1, use_container_width=True)
