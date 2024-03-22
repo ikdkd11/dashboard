@@ -137,7 +137,7 @@ def create_graph(df2):
             )    
 
     fig.update_layout(
-            title=dict(text='1월11일 광양-보성 2차 노면관측 그래프<br>일출시각 <07:39>, 관측시간<06:50 ~ 08:11>', font=dict(size=15, color="black", family="Arial Black"), x=0),
+            title=dict(text='1월11일 광양-보성 2차 노면관측 그래프<br>일출시각 <07:39>, 관측시간<06:50 ~ 08:11>', font=dict(size=23, color="black", family="Arial Black"), x=0),
             xaxis=dict(
                 title='날짜와 시간',
                 range=[df2['시간'].min(), df2['시간'].max()],
@@ -212,7 +212,7 @@ def create_graph(df3):
             )
 
     fig.update_layout(
-        title=dict(text='1월24일 보성-광양 3차 노면관측 그래프<br>일몰시각 <17:52>, 관측시간<17:49 ~ 19:16>', font=dict(size=15, color="black", family="Arial Black"), x=0),
+        title=dict(text='1월24일 보성-광양 3차 노면관측 그래프<br>일몰시각 <17:52>, 관측시간<17:49 ~ 19:16>', font=dict(size=23, color="black", family="Arial Black"), x=0),
         xaxis=dict(
             title='날짜와 시간',
             range=[df3['시간'].min(), df3['시간'].max()],
@@ -288,7 +288,7 @@ def create_graph(df4):
         )
 
     fig.update_layout(
-        title=dict(text='1월25일 광양-보성 4차 노면관측 그래프<br>일출시각 <07:35>, 관측시간<05:56 ~ 07:17>', font=dict(size=15, color="black", family="Arial Black"), x=0),
+        title=dict(text='1월25일 광양-보성 4차 노면관측 그래프<br>일출시각 <07:35>, 관측시간<05:56 ~ 07:17>', font=dict(size=23, color="black", family="Arial Black"), x=0),
         xaxis=dict(
             title='날짜와 시간',
             range=[df4['시간'].min(), df4['시간'].max()],
