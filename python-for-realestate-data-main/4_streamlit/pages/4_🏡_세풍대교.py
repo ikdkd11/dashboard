@@ -15,6 +15,7 @@ import requests
 from io import BytesIO
 import tot3
 import mapp3
+import tta
 
 st.header('위험구간 네번째 - 세풍대교')    
 st.subheader('<세풍대교 - 초남1교 - 초남터널>')
