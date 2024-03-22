@@ -77,7 +77,7 @@ def create_graph(average_temperatures1):
         trace.text = [f"{y}°C" for y in trace.y]
         trace.textposition = "top left"
         trace.marker = dict(size=15)  # Keeping the marker size adjustment
-        trace.textfont = dict(size=15)  # Adjusting text size
+        trace.textfont = dict(size=15, color='black')  # Adjusting text size
     return fig
     # Attempting to display the updated plot again
 grbp1 = create_graph(average_temperatures1)
