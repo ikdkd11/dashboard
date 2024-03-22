@@ -36,7 +36,7 @@ mmap4 = mapp5.map64
 tab1, tab2, tab3, tab4 = st.tabs(["1차 관측", "2차 관측", "3차 관측", "4차 관측"])
 with tab1:
 # 첫 번째 차트
-    st.subheader('10일 저녁~11일 새벽 : 예보 중점 사항')
+    st.subheader('1월 10일 16시 발표 : 예보 중점 사항')
     st.markdown(
         '''
         1. 내일(11일) 새벽부터 오전 사이 내륙을 중심으로 :blue[짙은 안개]가 끼는 곳이 있겠습니다.
