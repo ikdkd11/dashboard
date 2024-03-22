@@ -75,7 +75,7 @@ def create_graph(average_temperatures1):
     for trace in fig.data:
         trace.mode = 'lines+markers+text'
         trace.text = [f"{y}°C" for y in trace.y]
-        trace.textposition = "top center"
+        trace.textposition = "top left"
         trace.marker = dict(size=15)  # Keeping the marker size adjustment
         trace.textfont = dict(size=20)  # Adjusting text size
     return fig
