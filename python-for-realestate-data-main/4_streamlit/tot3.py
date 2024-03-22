@@ -735,7 +735,7 @@ def create_graph(df55_cleaned):
             x=df55_cleaned.index,  # 인덱스를 x축 데이터로 사용
             y=df55_cleaned[f'노면온도({i}차)'],
             name=f'노면온도({i}차)',
-            line=dict(color=road_temp_colors[i-1], width=1.5),
+            line=dict(color=road_temp_colors[i-1], width=2),
             connectgaps=True
         ))
 
