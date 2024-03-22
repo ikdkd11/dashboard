@@ -36,7 +36,6 @@ mmap4 = mapp5.map64
 tab1, tab2, tab3, tab4 = st.tabs(["1차 관측", "2차 관측", "3차 관측", "4차 관측"])
 with tab1:
 # 첫 번째 차트
-    st.header('2번국도(보성(초당교차로)~광양(마룡교)) 1차관측 노면온도 시계열 그래프') 
     st.subheader('10일 저녁~11일 새벽 : 예보 중점 사항')
     st.markdown(
         '''
