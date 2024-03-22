@@ -56,12 +56,12 @@ def create_graph(average_temperatures1):
         xaxis=dict(
             title='구간 전체/저온구간 진입전/저온구간',
             title_font=dict(size=20),
-            tickfont=dict(size=23)  # Adjusting x-axis title font size
+            tickfont=dict(size=20)  # Adjusting x-axis title font size
         ),
         yaxis=dict(
             title='노면온도(°C)',
             title_font=dict(size=20),
-            tickfont=dict(size=23)  # Adjusting y-axis title font size
+            tickfont=dict(size=20)  # Adjusting y-axis title font size
         ),
         legend_title='Observation Order',
         legend_title_font=dict(size=12),  # Adjusting legend title font size
@@ -77,7 +77,7 @@ def create_graph(average_temperatures1):
         trace.text = [f"{y}°C" for y in trace.y]
         trace.textposition = "top center"
         trace.marker = dict(size=15)  # Keeping the marker size adjustment
-        trace.textfont = dict(size=25)  # Adjusting text size
+        trace.textfont = dict(size=20)  # Adjusting text size
     return fig
     # Attempting to display the updated plot again
 grbp1 = create_graph(average_temperatures1)
