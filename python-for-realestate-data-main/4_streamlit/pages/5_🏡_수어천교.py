@@ -15,17 +15,19 @@ import requests
 from io import BytesIO
 import tot3
 import mapp4
+import tta
 
 st.header('위험구간 다섯번째 - 수어천교')    
 st.subheader('<중군터널 - 신금1,2교 - 수어천교 - 마룡교>')
 st.write('주소: 전라남도 광양시 옥곡면 신금리')
-box11 = plotbox.box1
+box55 = plotbox.box5
 map5_1 = mapp4.map51
 map5_2 = mapp4.map52
 map5_3 = mapp4.map53
 map5_4 = mapp4.map54
-
+table5 = tta.average_temperatures5
 grph5 = tot3.grp55
+
 col1, col2 = st.columns([1,1])
 with col1:
     option = st.selectbox('표시 이미지 선택:',
@@ -56,4 +58,10 @@ with col2:
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
 col1, col2 = st.columns([1,1])
 col1.plotly_chart(grph5, use_container_width = True)
-col2.plotly_chart(box11, use_container_width = True) 
+with col2:
+    tab1, tab2 = st.tabs(["Table", "Graph"])
+    with tab1:
+       st.subheader('위험구간 중 최저 노면온도 벌교대교/장양육교 평균 노면온도 비교')
+       st.table(table5.head(5))
+    with tab2:
+        st.plotly_chart(box55, use_container_width = True) 

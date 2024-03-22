@@ -20,12 +20,12 @@ import tta
 st.header('위험구간 네번째 - 세풍대교')    
 st.subheader('<세풍대교 - 초남1교 - 초남터널>')
 st.write('주소: 전라남도 광양시 광양읍 초남리')    
-box11 = plotbox.box1
+box44 = plotbox.box4
 map4_1 = mapp3.map41
 map4_2 = mapp3.map42
 map4_3 = mapp3.map43
 map4_4 = mapp3.map44
-
+table4 = tta.average_temperatures4
 grph4 = tot3.grp44
 col1, col2 = st.columns([1,1])
 with col1:
@@ -59,4 +59,10 @@ with col2:
 st.subheader('위험구간4(세풍대교-초남1교-초남터널) 1~4차 관측회차 별 시계열 그래프 및 박스그림                                                                               ')
 col1, col2 = st.columns([1,1])
 col1.plotly_chart(grph4, use_container_width = True)
-col2.plotly_chart(box11, use_container_width = True) 
+with col2:
+    tab1, tab2 = st.tabs(["Table", "Graph"])
+    with tab1:
+       st.subheader('위험구간 중 최저 노면온도 벌교대교/장양육교 평균 노면온도 비교')
+       st.table(table4.head(5))
+    with tab2:
+        st.plotly_chart(box44, use_container_width = True) 
