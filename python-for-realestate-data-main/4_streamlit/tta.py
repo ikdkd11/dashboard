@@ -65,7 +65,7 @@ def create_graph(average_temperatures1):
         ),
         legend_title='Observation Order',
         legend_title_font=dict(size=12),  # Adjusting legend title font size
-        margin=dict(l=100, r=100, t=100, b=100)
+        margin=dict(l=150, r=150, t=100, b=100)
     )
 
     # Adding markers to the line
