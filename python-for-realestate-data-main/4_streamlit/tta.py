@@ -49,7 +49,7 @@ average_temperatures5.columns = ['1차 관측', '2차 관측', '3차 관측', '4
 # Using plotly to generate the line graph
 def create_graph(average_temperatures1):
     fig = px.line(average_temperatures1.reset_index(), x='구분', y=average_temperatures1.columns,
-                title='위험구간 중 최저 노면온도 기록구간 진입 전/후 평균 노면온도 그래프')
+                title='위험구간(초당교) 중 최저 노면온도 기록구간 진입 전/후 평균 노면온도 그래프')
 
     # Updating layout for clarity
     fig.update_layout(
