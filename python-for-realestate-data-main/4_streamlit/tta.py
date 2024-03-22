@@ -81,3 +81,38 @@ def create_graph(average_temperatures1):
     return fig
     # Attempting to display the updated plot again
 grbp1 = create_graph(average_temperatures1)
+
+def create_graph(average_temperatures2):
+    fig = px.line(average_temperatures2.reset_index(), x='구분', y=average_temperatures2.columns,
+                title='위험구간(옥전교) 중 최저 노면온도 기록구간 진입 전/후 평균 노면온도 그래프')
+
+    # Updating layout for clarity
+    fig.update_layout(
+        xaxis=dict(
+            title='구간 전체/저온구간 진입전/저온구간',
+            title_font=dict(size=20),
+            tickfont=dict(size=20)  # Adjusting x-axis title font size
+        ),
+        yaxis=dict(
+            title='노면온도(°C)',
+            title_font=dict(size=20),
+            tickfont=dict(size=20)  # Adjusting y-axis title font size
+        ),
+        legend_title='Observation Order',
+        legend_title_font=dict(size=12),  # Adjusting legend title font size
+        margin=dict(l=50, r=50, t=40, b=30)
+    )
+
+    # Adding markers to the line
+    # Adjusting the marker size in the plotly graph
+    # Adding data labels to the markers on the plotly graph with Celsius symbol
+    # Adjusting the text size on the markers in the plotly graph
+    for trace in fig.data:
+        trace.mode = 'lines+markers+text'
+        trace.text = [f"{y}°C" for y in trace.y]
+        trace.textposition = "top left"
+        trace.marker = dict(size=15)  # Keeping the marker size adjustment
+        trace.textfont = dict(size=15, color='black')  # Adjusting text size
+    return fig
+    # Attempting to display the updated plot again
+grbp2 = create_graph(average_temperatures2)
