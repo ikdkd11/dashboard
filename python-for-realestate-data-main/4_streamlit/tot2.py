@@ -34,7 +34,7 @@ def create_graph(df1):
             x=df1['시간'],  
             y=df1[location],
             name=location,
-            line=dict(color=f'rgb{color}', width=1.2),  # 라인 색상 및 두께 설정
+            line=dict(color=f'rgb{color}', width=1.5),  # 라인 색상 및 두께 설정
             connectgaps=True
         ))
 
@@ -104,7 +104,7 @@ def create_graph(df2):
             x=df2['시간'],
             y=df2[location],
             name=location,
-            line=dict(color=f'rgb{color}', width=1),  # 라인 색상 및 두께 설정
+            line=dict(color=f'rgb{color}', width=1.5),  # 라인 색상 및 두께 설정
             connectgaps=True
     ))
 
@@ -172,7 +172,7 @@ def create_graph(df3):
             x=df3['시간'],
             y=df3[location],
             name=location,
-            line=dict(color=f'rgb{color}', width=1.2),
+            line=dict(color=f'rgb{color}', width=1.5),
             connectgaps=True
         ))
 
@@ -246,7 +246,7 @@ def create_graph(df4):
             x=df4['시간'],
             y=df4[location],
             name=location,
-            line=dict(color=f'rgb{color}', width=1.2),
+            line=dict(color=f'rgb{color}', width=1.5),
             connectgaps=True
         ))
 
