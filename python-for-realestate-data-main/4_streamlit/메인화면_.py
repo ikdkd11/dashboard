@@ -43,6 +43,12 @@ with tab1:
         1. 내일(11일) 새벽부터 오전 사이 내륙을 중심으로 :blue[짙은 안개]가 끼는 곳이 있겠습니다.
         2.  :blue[내린 비]가 얼어 :red[도로 살얼음]이 나타나는 곳이 있겠습니다.
         ''')
+    st.markdown(
+        '''
+        1차 관측 시: 보성/순천/광양 평균 풍향풍속 : 
+        보성 <WNW, 5.4m/s>, 순천 <NNW, 2.4m/s>, 광양 <N, 1.7m/s>
+        '''
+    )
     st.plotly_chart(trade_mean_map1, use_container_width=True)
     st.subheader('2번국도(보성(초당교차로)~광양(마룡교)) 1차관측 노면온도 정보 지도 시각화') 
     st.plotly_chart(mmap1, use_container_width=True)
