@@ -62,7 +62,7 @@ col1.plotly_chart(grph3, use_container_width = True)
 with col2:
     tab1, tab2 = st.tabs(["Table", "Graph"])
     with tab1:
-       st.subheader('위험구간 중 최저 노면온도 기록구간 진입 전/후 평균 노면온도 비교')
+       st.subheader('위험구간 중 최저 노면온도 벌교대교/장양육교 평균 노면온도 비교')
        st.table(table3.head(5))
     with tab2:
         st.plotly_chart(box33, use_container_width = True) 
