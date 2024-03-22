@@ -15,6 +15,7 @@ import requests
 from io import BytesIO
 import tot3
 import mapp1
+import tta
 
 st.header('위험구간 두번째 - 옥전교')
 st.subheader('<옥전교(남해고속도로 고각하부 - 옥전교)>')
@@ -25,7 +26,7 @@ map2_1 = mapp1.map21
 map2_2 = mapp1.map22
 map2_3 = mapp1.map23
 map2_4 = mapp1.map24
-
+table2 = tta.average_temperatures2
 #1~5번째 위험지역 별 시계열 그래프
 grph2 = tot3.grp22
 
@@ -70,4 +71,11 @@ with col2:
 st.subheader('위험구간2(남해고속도로 고각하부-옥전교) 1~4차 관측회차 별 시계열 그래프 및 박스그림                                                                               ')
 col1, col2 = st.columns([1,1])
 col1.plotly_chart(grph2, use_container_width = True)
-col2.plotly_chart(box22, use_container_width = True) 
+
+with col2:
+    tab1, tab2 = st.tabs(["Table", "Graph"])
+    with tab1:
+       st.subheader('위험구간 중 최저 노면온도 기록구간 진입 전/후 평균 노면온도 비교')
+       st.table(table2.head(5))
+    with tab2:
+        st.plotly_chart(box22, use_container_width=True)
