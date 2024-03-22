@@ -99,7 +99,7 @@ def create_graph(df5):
     fig = px.box(df5, x="차수", y="온도", color="구분")
     # fig: 중군터널<->수어천교 - 관측 회차 별 위험구간 온도 분포
     fig.update_layout(
-        title_text='위험구간5: [중군터널<->수어천교 - 관측 회차 별 위험구간 온도 분포',
+        title_text='위험구간5: [중군터널<->마룡교] - 관측 회차 별 위험구간 온도 분포',
         title_font=dict(size=20, color='black', family="Arial Bold, sans-serif"),
         legend_title_font=dict(size=16, color='black', family="Arial Bold, sans-serif"),
         legend_font=dict(size=14, family="Arial, sans-serif")
