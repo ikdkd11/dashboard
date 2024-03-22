@@ -27,7 +27,7 @@ map3_3 = mapp2.map33
 map3_4 = mapp2.map34
 table3 = tta.average_temperatures3
 grph3 = tot3.grp33
-
+grbp33 = tta.grbp3
 col1, col2 = st.columns([1,1])
 with col1:
     option = st.selectbox('표시 이미지 선택:',
@@ -59,10 +59,13 @@ with col2:
 st.subheader('위험구간3(벌교대교-장양육교) 1~4차 관측회차 별 시계열 그래프 및 박스그림                                                                               ')        
 col1, col2 = st.columns([1,1])
 col1.plotly_chart(grph3, use_container_width = True)
+
 with col2:
-    tab1, tab2 = st.tabs(["Table", "Graph"])
+    tab1, tab2, tab3 = st.tabs(["Table", "Graph1", "Graph2"])
     with tab1:
-       st.subheader('위험구간 중 최저 노면온도 벌교대교/장양육교 평균 노면온도 비교')
+       st.subheader('위험구간(벌교대교) 중 최저 노면온도 기록구간 별 노면온도 비교')
        st.table(table3.head(5))
     with tab2:
-        st.plotly_chart(box33, use_container_width = True) 
+         st.plotly_chart(grbp33, use_container_width=True)
+    with tab3:
+        st.plotly_chart(box33, use_container_width=True)        

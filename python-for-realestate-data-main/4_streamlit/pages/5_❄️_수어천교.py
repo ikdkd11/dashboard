@@ -25,6 +25,7 @@ map5_1 = mapp4.map51
 map5_2 = mapp4.map52
 map5_3 = mapp4.map53
 map5_4 = mapp4.map54
+grbp55 = tta.grbp5
 table5 = tta.average_temperatures5
 grph5 = tot3.grp55
 
@@ -59,9 +60,11 @@ with col2:
 col1, col2 = st.columns([1,1])
 col1.plotly_chart(grph5, use_container_width = True)
 with col2:
-    tab1, tab2 = st.tabs(["Table", "Graph"])
+    tab1, tab2, tab3 = st.tabs(["Table", "Graph1", "Graph2"])
     with tab1:
-       st.subheader('위험구간 중 최저 노면온도 벌교대교/장양육교 평균 노면온도 비교')
+       st.subheader('위험구간(옥전교) 중 최저 노면온도 기록구간 진입 전/후 평균 노면온도 비교')
        st.table(table5.head(5))
     with tab2:
-        st.plotly_chart(box55, use_container_width = True) 
+         st.plotly_chart(grbp55, use_container_width=True)
+    with tab3:
+        st.plotly_chart(box55, use_container_width=True)
