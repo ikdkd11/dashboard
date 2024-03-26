@@ -61,4 +61,4 @@ def create_graph(combined):
 
     # 그래프 출력
 bar1 = create_graph(combined)
-    fig.show()
+bar1.show()
