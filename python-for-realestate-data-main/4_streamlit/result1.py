@@ -50,7 +50,7 @@ def create_graph(combined):
 
     # Create the bar plot
     fig = px.bar(combined, x='차수', y='변화량', color='종류', barmode='group',
-                 title='차수별 종류에 따른 변화량 평균', text=combined['변화량'].round(1).astype(str))
+                 title='교각 및 터널 종류에 따른 노면온도 감소량 비교', text=combined['변화량'].round(1).astype(str))
 
     # Customize colors
     colors = {'육상교각': 'rgb(212,18,18)', '수상교각': 'rgb(0,51,255)', '터널': 'rgb(0,192,0)'}
