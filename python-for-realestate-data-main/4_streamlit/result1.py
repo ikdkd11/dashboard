@@ -41,22 +41,35 @@ combined = pd.concat([grouped, overall_mean], ignore_index=True)
 
 # 막대 그래프 생성
 def create_graph(combined):
-    fig = px.bar(combined, x='차수', y='변화량', color='종류', barmode='group',
-                title='차수별 종류에 따른 변화량 평균', text=combined['변화량'].round(1).astype(str))
+    # Custom sort for '종류' to ensure bars are in the correct order
+    종류_order = ['육상교각', '수상교각', '터널']
+    차수_order = combined['차수'].unique()  # Preserves the unique order of '차수'
+    combined['종류'] = pd.Categorical(combined['종류'], categories=종류_order, ordered=True)
+    combined['차수'] = pd.Categorical(combined['차수'], categories=차수_order, ordered=True)
+    combined = combined.sort_values(['종류', '차수'])
 
-    # 레이아웃 조정
+    # Create the bar plot
+    fig = px.bar(combined, x='차수', y='변화량', color='종류', barmode='group',
+                 title='차수별 종류에 따른 변화량 평균', text=combined['변화량'].round(1).astype(str))
+
+    # Customize colors
+    colors = {'육상교각': 'rgb(212,18,18)', '수상교각': 'rgb(0,51,255)', '터널': 'rgb(0,192,0)'}
+    fig.for_each_trace(lambda t: t.update(marker_color=colors[t.name]))
+
+    # Update layout
     fig.update_layout(
         xaxis_tickangle=0,
         xaxis_title_font=dict(size=20),
         yaxis_title_font=dict(size=20),
         xaxis_tickfont=dict(size=23),
         yaxis_tickfont=dict(size=23),
-        xaxis_title='관측 회차',  # x축 제목 변경
-        yaxis_title='노면온도 감소량'  # y축 제목 변경
+        xaxis_title='관측 회차',
+        yaxis_title='노면온도 감소량'
     )
 
-    # 텍스트 글꼴 크기 조정
+    # Update text font size
     fig.update_traces(textfont_size=20, textangle=0, textposition="outside", cliponaxis=False)
+
     return fig
 
     # 그래프 출력
