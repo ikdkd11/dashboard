@@ -18,10 +18,10 @@ from branca.colormap import LinearColormap
 import mapp5
 
 #github로부터 데이터 파일을 읽어오기 위한 raw url
-urlbar = 'https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data_bar-main/0_data_bar/streamlit_data_bar/result_data_bar1.csv'
+url_bar = 'https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/streamlit_data/result_data1.csv'
 
 # 데이터 불러오기
-data_bar = pd.read_csv(urlbar)
+data_bar = pd.read_csv(url_bar)
 
 # 필요없는 열 제거
 data_bar = data_bar.drop(['행정구역', '이름'], axis=1)
@@ -61,4 +61,3 @@ def create_graph(combined):
 
     # 그래프 출력
 bar1 = create_graph(combined)
-bar1.show()
