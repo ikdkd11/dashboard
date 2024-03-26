@@ -17,7 +17,7 @@ import tot3
 import mapp1
 import tta
 
-st.header('위험구간 두번째 - 옥전교')
+st.header('위험구간 두번째 - 옥전교', divider='rainbow')
 st.subheader('<옥전교(남해고속도로 고각하부 - 옥전교)>')
 st.write('주소: 전남 보성군 벌교읍 칠동리 옥전교')    
 grbp22 = tta.grbp2

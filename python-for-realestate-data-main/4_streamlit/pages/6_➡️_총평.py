@@ -17,7 +17,7 @@ import tot3
 import mapp4
 import tta
 
-st.header('위험구간 분류')
+st.header('위험구간 분류', divider='rainbow')
 st.text('위험구간: 노면온도가 2~3초 이내에 섭씨 1도 이상 급락하는 구간') 
 st.markdown('위험구간 100%가 교각이나 터널 출입구에 해당하였고, 이에 맞춰 위험구간을 1.육상교각, 2. 수상교각, 3. 터널 출입구 세 가지로 분류하였음')
 st.subheader('1차 관측 위험구간')

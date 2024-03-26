@@ -17,7 +17,7 @@ import tot3
 import mapp4
 import tta
 
-st.header('위험구간 다섯번째 - 수어천교')    
+st.header('위험구간 다섯번째 - 수어천교', divider='rainbow')    
 st.subheader('<중군터널 - 신금1,2교 - 수어천교 - 마룡교>')
 st.write('주소: 전라남도 광양시 옥곡면 신금리')
 box55 = plotbox.box5

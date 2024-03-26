@@ -17,4 +17,4 @@ import tot3
 import mapp
 import tta
 
-st.header('위험구간 분류')
+st.header('위험구간 분류', divider='rainbow')

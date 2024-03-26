@@ -25,7 +25,7 @@ map1_4 = mapp.map14
 table1 = tta.average_temperatures1
 grph1 = tot3.grp11
 grbp11 = tta.grbp1
-st.header('위험구간 첫번째 - 초당교차로')    
+st.header('위험구간 첫번째 - 초당교차로', divider='rainbow')    
 st.subheader('<초당교차로 - 초당교>')
 st.write('주소: 전라남도 보성군 보성읍 옥평리 952-8')
 col1, col2 = st.columns([1,1])

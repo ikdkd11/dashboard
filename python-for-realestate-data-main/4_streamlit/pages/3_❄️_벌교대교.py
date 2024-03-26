@@ -17,7 +17,7 @@ import tot3
 import mapp2
 import tta
 
-st.header('위험구간 세번째 - 벌교대교')    
+st.header('위험구간 세번째 - 벌교대교', divider='rainbow')    
 st.subheader('<벌교대교 - 장양육교>')
 st.write('주소: 전남 보성군 벌교읍 장좌리 벌교대교, 전라남도 보성군 벌교읍 장양리 장양육교')  
 box33 = plotbox.box3
