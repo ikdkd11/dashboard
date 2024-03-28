@@ -81,9 +81,9 @@ with col1:
                   '초남1교 사진'
                   ])
 with col2:
-    if option == '위험구간1(초당교) 위성사진':
+    if option == '위성 사진으로 보는 네 번째 위험구간에서의 노면온도 감소 지점':
         st.image(image1)
-    elif option == '최저온도 기록구간 사진':
+    elif option == '노면온도 그래프로 보는 세풍대교와 초남1교에 의한 연쇄 냉각효과':
         st.image(image2)  # 해당 이미지 파일의 경로
     elif option == '세풍대교 사진':
         st.image(image3)  # 해당 이미지 파일의 경로
