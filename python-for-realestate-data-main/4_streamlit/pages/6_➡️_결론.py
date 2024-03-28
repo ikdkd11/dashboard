@@ -64,10 +64,22 @@ st.markdown("""
 col1, col2 = st.columns(2)
 with col1:
     st.subheader('교각의 온도변화 그래프')
-    st.image(image1, use_column_width=True)
+    st.image(image1, use_column_width=True, caption= '노면온도가 감소 후 유지, 기온 변화없음')
 with col2:
     st.subheader('터널의 온도변화 그래프')
-    st.image(image2, use_column_width=True)
+    st.image(image2, use_column_width=True, caption= '노면온도가 감소 후 유지, 기온 변화없음')
+st.markdown("""
+    <style>
+    .big-font {
+        font-size:20px !important;
+    }
+    </style>
+    <div class="big-font">
+    ○ 교각 : :red[구간 진입 시 노면온도 급격하게 감소, 유지되는 특징을 보인 후 구간 이탈 시 노면온도 상승, 기온은 일정하게 유지됨]<br>
+    ○ 노면온도가 더 크게 감소하는 특성과 더불어 주변 지리환경에 따라 커브, 내리막 등 운전 상의 난점이 존재하는 육상교각의 특성을 고려했을 때 육상교각의 결빙사고 위험성이 높다고 판단됨<br>
+    ○ 터널의 경우, 노면온도 변화 양상이 교각의 경우와 다르게 나타나는 특징이 존재하여 교각의 경우보다 더 큰 노면온도 감소효과를 보암(하단 그래프 참조)
+    </div>
+    """, unsafe_allow_html=True)
 st.subheader('1차 관측 위험구간')
 st.markdown('')
 st.markdown('위험구간 100%가 교각이나 터널 출입구에 해당하였고, 이에 맞춰 위험구간을 1.육상교각, 2. 수상교각, 3. 터널 출입구 세 가지로 분류하였음')
