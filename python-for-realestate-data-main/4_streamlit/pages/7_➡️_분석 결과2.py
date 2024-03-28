@@ -19,10 +19,18 @@ import tta
 import result1
 url2p = 'https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/streamlit_data/%EB%83%89%EA%B0%81%EC%A4%91%EC%B2%A9.png'
 url1p = 'https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/streamlit_data/%EB%83%89%EA%B0%81%EC%A4%91%EC%B2%A91.png'
+url3p = 'https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/streamlit_data/%EC%84%B8%ED%92%8D%EB%8C%80%EA%B5%90%20%EB%83%89%EA%B0%81.png'
+url4p = 'https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/streamlit_data/%EC%B4%88%EB%82%A81%EA%B5%90%20%EB%83%89%EA%B0%81.png'
+
 response1 = requests.get(url1p)
 response2 = requests.get(url2p)
+response3 = requests.get(url3p)
+response4 = requests.get(url4p)
+
 image1 = Image.open(BytesIO(response1.content))
 image2 = Image.open(BytesIO(response2.content))
+image3 = Image.open(BytesIO(response3.content))
+image4 = Image.open(BytesIO(response4.content))
 
 bar1r = result1.bar1
 data1 = {
@@ -88,3 +96,21 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 st.image(image2, use_column_width=True)
+
+col1, col2 = st.columns([1,1])
+with col1:
+    option = st.selectbox('표시 이미지 선택:',
+                 ['위성 사진으로 보는 네 번째 위험구간에서의 노면온도 감소 지점',
+                  '노면온도 그래프로 보는 세풍대교와 초남1교에 의한 연쇄 냉각효과',
+                  '세풍대교 사진',
+                  '초남1교 사진'
+                  ])
+with col2:
+    if option == '위험구간1(초당교) 위성사진':
+        st.image(image1)
+    elif option == '최저온도 기록구간 사진':
+        st.image(image2)  # 해당 이미지 파일의 경로
+    elif option == '세풍대교 사진':
+        st.image(image3)  # 해당 이미지 파일의 경로
+    elif option == '초남1교 사진':
+        st.image(image4)  # 해당 이미지 파일의 경로
