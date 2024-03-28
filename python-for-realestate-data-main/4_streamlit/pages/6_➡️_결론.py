@@ -23,8 +23,7 @@ response1 = requests.get(url1p)
 response2 = requests.get(url2p)
 image1 = Image.open(BytesIO(response1.content))
 image2 = Image.open(BytesIO(response2.content))
-img1 = Image.open(image2)
-img2 = Image.open(url2p)
+
 bar1r = result1.bar1
 data1 = {
     "분류": ["1차 관측", "2차 관측", "3차 관측", "4차 관측", "전체"],
@@ -65,10 +64,10 @@ st.markdown("""
 col1, col2 = st.columns(2)
 with col1:
     st.subheader('교각의 온도변화 그래프')
-    st.image(img1, use_column_width=True)
+    st.image(image1, use_column_width=True)
 with col2:
     st.subheader('터널의 온도변화 그래프')
-    st.image(img2, use_column_width=True)
+    st.image(image2, use_column_width=True)
 st.subheader('1차 관측 위험구간')
 st.markdown('')
 st.markdown('위험구간 100%가 교각이나 터널 출입구에 해당하였고, 이에 맞춰 위험구간을 1.육상교각, 2. 수상교각, 3. 터널 출입구 세 가지로 분류하였음')
