@@ -17,7 +17,10 @@ import tot3
 import mapp4
 import tta
 import result1
-
+url1p = 'https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%EB%8B%A4%EB%A6%AC%EC%9E%90%EB%A3%8C.png?raw=true'
+url2p = 'https://github.com/ikdkd11/dashboard/blob/main/python-for-realestate-data-main/0_data/streamlit_data/%ED%84%B0%EB%84%90%EC%9E%90%EB%A3%8C.png?raw=true'
+img1 = Image.open(url1p)
+img2 = Image.open(url2p)
 bar1r = result1.bar1
 data1 = {
     "분류": ["1차 관측", "2차 관측", "3차 관측", "4차 관측", "전체"],
@@ -58,6 +61,7 @@ st.markdown("""
 col1, col2 = st.columns(2)
 with col1:
     st.subheader('교각의 온도변화 그래프')
+    st.image(img1, use_column_width=True)
 st.subheader('1차 관측 위험구간')
 st.markdown('')
 st.markdown('위험구간 100%가 교각이나 터널 출입구에 해당하였고, 이에 맞춰 위험구간을 1.육상교각, 2. 수상교각, 3. 터널 출입구 세 가지로 분류하였음')
