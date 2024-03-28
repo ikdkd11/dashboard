@@ -72,31 +72,6 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 st.markdown(' ')
-st.subheader('냉각 효과 중첩을 인한 노면온도 감소 효과 강화 사례 - 네 번째 위험구간(세풍대교 ~ 초남터널)')
-st.markdown("""
-    <style>
-    .big-font {
-        font-size:20px !important;
-    }
-    </style>
-    <div class="big-font">
-    <위성 사진으로 보는 네 번째 위험구간에서의 노면온도 감소 지점>
-    </div>
-    """, unsafe_allow_html=True)
-st.image(image1, use_column_width=True)
-st.markdown(" ")
-st.markdown("""
-    <style>
-    .big-font {
-        font-size:20px !important;
-    }
-    </style>
-    <div class="big-font">
-    <노면온도 그래프로 보는 세풍대교와 초남1교에 의한 연쇄 냉각효과>
-    </div>
-    """, unsafe_allow_html=True)
-st.image(image2, use_column_width=True)
-
 col1, col2 = st.columns([1,1])
 with col1:
     option = st.selectbox('표시 이미지 선택:',
