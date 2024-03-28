@@ -88,4 +88,16 @@ with col2:
     elif option == '세풍대교 사진':
         st.image(image3)  # 해당 이미지 파일의 경로
     elif option == '초남1교 사진':
-        st.image(image4)  # 해당 이미지 파일의 경로
+        st.image(image4)  # 해당 이미지 파일의 경로'
+st.markdown(" ")
+st.markdown("""
+    <style>
+    .big-font {
+        font-size:20px !important;
+    }
+    </style>
+    <div class="big-font">
+     > 이러한 연쇄 노면냉각이 극대화 되는 지점이 다섯 번째 위험구간이었음<br>
+     > 관측경로 상에서 가장 긴 터널인 중군터널로 인해 터널 출입구에서 노면온도가 크게 하락하였고 이어지는 교각들(신금1, 2, 3교, 수어천교, 마룡교)가 이어지는 구조임<br>
+     > 이런 연유로 전체 관측 경로 상에서 노면온도가 가장 크게 감소하는 양상을 보였음 
+    """, unsafe_allow_html=True)
