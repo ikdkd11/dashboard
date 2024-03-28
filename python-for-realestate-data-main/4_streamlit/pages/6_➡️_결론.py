@@ -61,6 +61,7 @@ st.markdown("""
     ○ 터널의 경우, 노면온도 변화 양상이 교각의 경우와 다르게 나타나는 특징이 존재하여 교각의 경우보다 더 큰 노면온도 감소효과를 보암(하단 그래프 참조)<br>
     </div>
     """, unsafe_allow_html=True)
+st.header(' ')
 col1, col2 = st.columns(2)
 with col1:
     st.subheader('교각의 온도변화 그래프')
