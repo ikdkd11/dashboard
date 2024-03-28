@@ -63,3 +63,13 @@ st.markdown("""
      > 이러한 연쇄 노면냉각이 잘 드러난 사례를 아래쪽 표에 첨부함
     </div>
     """, unsafe_allow_html=True)
+st.markdown("""
+    <style>
+    .big-font {
+        font-size:20px !important;
+    }
+    </style>
+    <div class="big-font">
+    <냉각 효과 중첩을 인한 노면온도 감소 효과 강화 사례 - 네 번째 위험구간(세풍대교 ~ 초남터널)>
+    </div>
+    """, unsafe_allow_html=True)
