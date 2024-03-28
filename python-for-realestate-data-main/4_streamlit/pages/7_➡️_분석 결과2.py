@@ -76,6 +76,7 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 st.image(image1, use_column_width=True)
+st.markdown(" ")
 st.markdown("""
     <style>
     .big-font {
