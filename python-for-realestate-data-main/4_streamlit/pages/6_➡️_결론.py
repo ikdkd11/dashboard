@@ -34,7 +34,7 @@ data1 = {
 
 df1 = pd.DataFrame(data1)
 
-st.header('분석 결과1 - 교각, 터널마다 다르게 나타나는 노면온도 하락 패턴', divider='rainbow')
+st.header('■ 분석 결과1 - 교각, 터널마다 다르게 나타나는 노면온도 하락 패턴', divider='rainbow')
 st.markdown("""
     <style>
     .big-font {
@@ -81,6 +81,8 @@ st.markdown("""
     ○ 터널의 이러한 특성은 터널 길이가 길수록 강화되는 것이 관측됨(터널 길이가 길수록 온도 상승 폭과 하강 폭이 모두 비례함(하단 그래프 참조)
     </div>
     """, unsafe_allow_html=True)
+st.header(' ')
+st.header('■ 분석 결과2 - 공통 위험구간 선정 및 특성', divider='rainbow')
 st.subheader('1차 관측 위험구간')
 st.markdown('')
 st.markdown('위험구간 100%가 교각이나 터널 출입구에 해당하였고, 이에 맞춰 위험구간을 1.육상교각, 2. 수상교각, 3. 터널 출입구 세 가지로 분류하였음')
