@@ -62,6 +62,9 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader('교각의 온도변화 그래프')
     st.image(img1, use_column_width=True)
+with col2:
+    st.subheader('터널의 온도변화 그래프')
+    st.image(img2, use_column_width=True)
 st.subheader('1차 관측 위험구간')
 st.markdown('')
 st.markdown('위험구간 100%가 교각이나 터널 출입구에 해당하였고, 이에 맞춰 위험구간을 1.육상교각, 2. 수상교각, 3. 터널 출입구 세 가지로 분류하였음')
