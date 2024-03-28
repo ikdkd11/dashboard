@@ -17,7 +17,7 @@ import tot3
 import mapp4
 import tta
 import result1
-url1p = 'https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/streamlit_data/%EB%8B%A4%EB%A6%AC%EC%9E%90%EB%A3%8C.png'
+url1p = 'https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/streamlit_data/%EB%83%89%EA%B0%81%EC%A4%91%EC%B2%A9.png'
 url2p = 'https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/streamlit_data/%ED%84%B0%EB%84%90%EC%9E%90%EB%A3%8C.png'
 response1 = requests.get(url1p)
 response2 = requests.get(url2p)
@@ -63,6 +63,8 @@ st.markdown("""
      > 이러한 연쇄 노면냉각이 잘 드러난 사례를 아래쪽 표에 첨부함
     </div>
     """, unsafe_allow_html=True)
+st.markdown(' ')
+st.subheader('냉각 효과 중첩을 인한 노면온도 감소 효과 강화 사례 - 네 번째 위험구간(세풍대교 ~ 초남터널)')
 st.markdown("""
     <style>
     .big-font {
@@ -70,6 +72,7 @@ st.markdown("""
     }
     </style>
     <div class="big-font">
-    <냉각 효과 중첩을 인한 노면온도 감소 효과 강화 사례 - 네 번째 위험구간(세풍대교 ~ 초남터널)>
+    <위성 사진으로 보는 네 번째 위험구간에서의 노면온도 감소 지점>
     </div>
     """, unsafe_allow_html=True)
+st.image(image1, use_column_width=True)
