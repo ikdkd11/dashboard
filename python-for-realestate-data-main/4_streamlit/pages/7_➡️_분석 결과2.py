@@ -51,6 +51,15 @@ st.subheader(' ')
 st.subheader('공통 위험구간 5곳 상세 정보')
 st.table(df1)
 st.markdown('')
-st.markdown('위험구간 100%가 교각이나 터널 출입구에 해당하였고, 이에 맞춰 위험구간을 1.육상교각, 2. 수상교각, 3. 터널 출입구 세 가지로 분류하였음')
-st.markdown('1. 육: ')
-st.write('교각의 경우: 육상 교량에서 노면온도 감소 효과가 수상 교량에서보다 더욱 크고 기상 조건에 영향을 덜 받는 특성을 확인함')
+st.subheader('공통 위험구간의 연쇄 노면 냉각')
+st.markdown("""
+    <style>
+    .big-font {
+        font-size:20px !important;
+    }
+    </style>
+    <div class="big-font">
+     > 연쇄 노면냉각이란? 다리나 터널 같이 노면온도를 감소 시키는 도로 구조물이 연달아 이어지면서 냉각효과 역시 중첩되어 노면온도가 크게 낮아지고 구간을 벗어난 후에도 구간 이전에 비해 낮은 노면온도를 보이는 현상을 연쇄 노면 냉각이라 지정하였음<br>
+     > 이러한 연쇄 노면냉각이 잘 드러난 사례를 아래쪽 표에 첨부함
+    </div>
+    """, unsafe_allow_html=True)
