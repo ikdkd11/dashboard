@@ -20,7 +20,7 @@ import result1
 
 bar1r = result1.bar1
 
-st.header('분석 결과1: 교각, 터널마다 다르게 나타나는 노면온도 하락 패턴', divider='rainbow')
+st.header('분석 결과1 - 교각, 터널마다 다르게 나타나는 노면온도 하락 패턴', divider='rainbow')
 st.markdown("""
     <style>
     .big-font {
