@@ -19,7 +19,11 @@ import tta
 import result1
 url1p = 'https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/streamlit_data/%EB%8B%A4%EB%A6%AC%EC%9E%90%EB%A3%8C.png'
 url2p = 'https://raw.githubusercontent.com/ikdkd11/dashboard/main/python-for-realestate-data-main/0_data/streamlit_data/%ED%84%B0%EB%84%90%EC%9E%90%EB%A3%8C.png'
-img1 = Image.open(url1p)
+response1 = requests.get(url1p)
+response2 = requests.get(url2p)
+image1 = Image.open(BytesIO(response1.content))
+image2 = Image.open(BytesIO(response2.content))
+img1 = Image.open(image2)
 img2 = Image.open(url2p)
 bar1r = result1.bar1
 data1 = {
