@@ -47,7 +47,9 @@ st.markdown("""
      공통 위험구간의 경우, 다리와 터널 혹은 다리와 다리가 연쇄적으로 이어져있는 구조로 이로 인해 노면온도가 연달아서 감소하여 다른 곳에 비해 결빙 가능성이 높음
     </div>
     """, unsafe_allow_html=True)
-st.subheader('1차 관측 위험구간')
+st.subheader(' ')
+st.subheader('공통 위험구간 5곳 상세 정보')
+st.table(df1)
 st.markdown('')
 st.markdown('위험구간 100%가 교각이나 터널 출입구에 해당하였고, 이에 맞춰 위험구간을 1.육상교각, 2. 수상교각, 3. 터널 출입구 세 가지로 분류하였음')
 st.markdown('1. 육: ')
