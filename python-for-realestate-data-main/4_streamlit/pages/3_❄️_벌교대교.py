@@ -9,6 +9,7 @@ import json
 import math
 import plotbox
 import streamlit as st
+from streamlit.components.v1 import html
 from datetime import datetime
 from PIL import Image
 import requests
