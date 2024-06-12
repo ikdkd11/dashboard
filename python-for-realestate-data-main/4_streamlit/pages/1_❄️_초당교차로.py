@@ -27,30 +27,14 @@ table1 = tta.average_temperatures1
 grph1 = tot3.grp11
 grbp11 = tta.grbp1
 
-# CSS를 이용하여 우측 상단에 텍스트를 고정시키는 HTML 코드
-css_style = """
-<style>
-.fixed-top-right {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: transparent;
-    padding: 8px;
-    z-index: 999;
-}
-</style>
-<div class="fixed-top-right">광주지방기상청 관측과 제공</div>
-"""
 
-# 스트림릿 페이지에 HTML 컴포넌트 추가
-html(css_style)
-st.header('위험구간 첫번째 - 초당교차로', divider='rainbow')    
+st.header('저온구간 첫번째 - 초당교차로', divider='rainbow')    
 st.subheader('<초당교차로 - 초당교>')
 st.write('주소: 전라남도 보성군 보성읍 옥평리 952-8')
 col1, col2 = st.columns([1,1])
 with col1:
     option = st.selectbox('표시 이미지 선택:',
-                 ['위험구간1(초당교) 위성사진',
+                 ['저온구간1(초당교) 위성사진',
                   '최저온도 기록구간 사진',
                   '지도 시각화(1차 관측)',
                   '지도 시각화(2차 관측)',
@@ -66,7 +50,7 @@ image_url2 = (
 #response = requests.get(image_url)
 #image1 = Image.open(BytesIO(response.content))
 with col2:
-    if option == '위험구간1(초당교) 위성사진':
+    if option == '저온구간1(초당교) 위성사진':
         st.image(image_url1)
     elif option == '최저온도 기록구간 사진':
         st.image(image_url2)  # 해당 이미지 파일의 경로
@@ -82,14 +66,14 @@ with col2:
         # 예: map1 = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
         #st.map(map1)  # 'map1'을 미리 정의하고 해당 객체를 여기에 표시
 
-st.subheader('위험구간1(초당교차로-초당교 구간) 1~4차 관측회차 별 시계열 그래프 및 박스그림                                                                               ')
+st.subheader('저온구간1(초당교차로-초당교 구간) 1~4차 관측회차 별 시계열 그래프 및 박스그림                                                                               ')
 col1, col2 = st.columns([1,1])
 with col1:
     st.plotly_chart(grph1, use_container_width = True)
 with col2:
     tab1, tab2, tab3 = st.tabs(["Table", "Graph1", "Graph2"])
     with tab1:
-       st.subheader('위험구간(초당교) 중 최저 노면온도 기록구간 진입 전/후 평균 노면온도 비교')
+       st.subheader('저온구간(초당교) 중 최저 노면온도 기록구간 진입 전/후 평균 노면온도 비교')
        st.table(table1.head(5))
     with tab2:
          st.plotly_chart(grbp11, use_container_width=True)

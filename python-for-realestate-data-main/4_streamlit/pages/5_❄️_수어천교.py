@@ -18,25 +18,9 @@ import tot3
 import mapp4
 import tta
 
-# CSS를 이용하여 우측 상단에 텍스트를 고정시키는 HTML 코드
-css_style = """
-<style>
-.fixed-top-right {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: transparent;
-    padding: 8px;
-    z-index: 999;
-}
-</style>
-<div class="fixed-top-right">광주지방기상청 관측과 제공</div>
-"""
 
-# 스트림릿 페이지에 HTML 컴포넌트 추가
-html(css_style)
 
-st.header('위험구간 다섯번째 - 수어천교', divider='rainbow')    
+st.header('저온구간 다섯번째 - 수어천교', divider='rainbow')    
 st.subheader('<중군터널 - 신금1,2교 - 수어천교 - 마룡교>')
 st.write('주소: 전라남도 광양시 옥곡면 신금리')
 box55 = plotbox.box5
@@ -51,7 +35,7 @@ grph5 = tot3.grp55
 col1, col2 = st.columns([1,1])
 with col1:
     option = st.selectbox('표시 이미지 선택:',
-                 ['위험구간5(중군터널-신금1,2교-수어천교-마룡교) 위성사진',
+                 ['저온구간5(중군터널-신금1,2교-수어천교-마룡교) 위성사진',
                   '지도 시각화(1차 관측)',
                   '지도 시각화(2차 관측)',
                   '지도 시각화(3차 관측)',
@@ -63,7 +47,7 @@ image_url = (
 response = requests.get(image_url)
 image1 = Image.open(BytesIO(response.content))
 with col2:
-    if option == '위험구간5(중군터널-신금1,2교-수어천교-마룡교) 위성사진':
+    if option == '저온구간5(중군터널-신금1,2교-수어천교-마룡교) 위성사진':
         st.image(image_url)  # 해당 이미지 파일의 경로
     elif option == '지도 시각화(1차 관측)':
         col2.plotly_chart(map5_1, height = 1080, use_container_width = True)
@@ -81,7 +65,7 @@ col1.plotly_chart(grph5, use_container_width = True)
 with col2:
     tab1, tab2, tab3 = st.tabs(["Table", "Graph1", "Graph2"])
     with tab1:
-       st.subheader('위험구간(옥전교) 중 최저 노면온도 기록구간 진입 전/후 평균 노면온도 비교')
+       st.subheader('저온구간(옥전교) 중 최저 노면온도 기록구간 진입 전/후 평균 노면온도 비교')
        st.table(table5.head(5))
     with tab2:
          st.plotly_chart(grbp55, use_container_width=True)
